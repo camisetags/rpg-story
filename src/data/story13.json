@@ -1,0 +1,390 @@
+{
+  "explore_mountain_base": {
+    "description": "Enquanto explora a base das Montanhas Gélidas, você percebe uma passagem oculta entre as rochas. A passagem parece ter sido esculpida por mãos hábeis, levando para o subsolo. Intrigado, você decide explorar o que pode estar escondido nas profundezas.",
+    "options": [
+      {
+        "choice": "Entrar na passagem e descer para as profundezas",
+        "next": "enter_dwarven_city"
+      },
+      {
+        "choice": "Explorar outra parte das montanhas",
+        "next": "explore_mountain_peak"
+      }
+    ]
+  },
+  "enter_dwarven_city": {
+    "description": "A passagem leva você a uma câmara subterrânea gigantesca. À sua frente, os Portões de Karak-Dûm, a antiga cidade dos anões, se erguem majestosos. As portas são feitas de ferro e ouro, incrivelmente detalhadas, mas agora cobertas de poeira e sinais de abandono.",
+    "options": [
+      {
+        "choice": "Entrar na Cidade Subterrânea dos Anões",
+        "next": "explore_dwarven_city"
+      },
+      {
+        "choice": "Voltar para a superfície",
+        "next": "explore_mountain_base"
+      }
+    ]
+  },
+  "explore_dwarven_city": {
+    "description": "Você entra na cidade, os sons do mundo exterior desaparecem, substituídos por um silêncio profundo e opressor. As ruas de pedra são largas e bem esculpidas, mas vazias. Você sente que esta cidade guarda muitos segredos, mas também grandes perigos.",
+    "options": [
+      {
+        "choice": "Explorar os Salões do Conselho",
+        "next": "explore_council_halls"
+      },
+      {
+        "choice": "Visitar a Forja dos Ancestrais",
+        "next": "visit_ancestral_forge"
+      },
+      {
+        "choice": "Procurar o Arquivo Esquecido",
+        "next": "search_forgotten_archive"
+      },
+      {
+        "choice": "Explorar mais profundamente a cidade",
+        "next": "explore_city_deep"
+      }
+    ]
+  },
+  "explore_council_halls": {
+    "description": "Os Salões do Conselho são vastos, com cadeiras esculpidas em pedra dispostas em um círculo ao redor de uma mesa central. No centro da mesa, há um mapa antigo, mostrando toda a extensão da cidade e indicando áreas perigosas e proibidas.",
+    "options": [
+      {
+        "choice": "Estudar o mapa da cidade",
+        "next": "study_city_map"
+      },
+      {
+        "choice": "Explorar os arredores dos salões",
+        "next": "explore_halls_surroundings"
+      },
+      {
+        "choice": "Voltar e explorar outra parte da cidade",
+        "next": "explore_dwarven_city"
+      }
+    ]
+  },
+  "study_city_map": {
+    "description": "O mapa mostra a disposição da cidade e revela uma área chamada 'Salão das Sombras', marcada como um lugar perigoso e proibido. Há também marcas indicando tesouros escondidos e antigos segredos dos anões.",
+    "options": [
+      {
+        "choice": "Explorar o Salão das Sombras",
+        "next": "explore_shadow_hall"
+      },
+      {
+        "choice": "Ir em busca dos tesouros indicados no mapa",
+        "next": "treasure_hunt_city"
+      },
+      {
+        "choice": "Voltar e explorar outra parte da cidade",
+        "next": "explore_dwarven_city"
+      }
+    ]
+  },
+  "explore_halls_surroundings": {
+    "description": "Ao explorar os arredores dos salões, você encontra um anão idoso, sentado em um canto, sussurrando para si mesmo. Ele parece ser um dos últimos sobreviventes da cidade. Ao se aproximar, ele levanta a cabeça e diz: 'Você não deveria estar aqui. O que procura só trará ruína.'",
+    "options": [
+      {
+        "choice": "Conversar com o anão sobre a cidade",
+        "next": "talk_old_dwarf"
+      },
+      {
+        "choice": "Ignorar o anão e continuar explorando",
+        "next": "explore_dwarven_city"
+      }
+    ]
+  },
+  "talk_old_dwarf": {
+    "description": "O anão, com os olhos cansados, começa a contar a história da cidade. 'Karak-Dûm foi construída sobre uma mina que continha algo mais do que ouro e gemas. Nós escavamos fundo demais, e despertamos algo que não deveria ser tocado. Agora, tudo o que resta são sombras e ossos.'",
+    "options": [
+      {
+        "choice": "Perguntar mais sobre o que foi despertado",
+        "next": "ask_about_awakening"
+      },
+      {
+        "choice": "Agradecer o anão e sair",
+        "next": "explore_dwarven_city"
+      }
+    ]
+  },
+  "ask_about_awakening": {
+    "description": "O anão estremece ao lembrar. 'Era um espírito antigo, uma entidade presa nas profundezas por milênios. Quando a despertamos, ela tomou a cidade. Apenas alguns de nós escaparam, e aqueles que ficaram... se tornaram parte das sombras.'",
+    "options": [
+      {
+        "choice": "Explorar o Salão das Sombras para entender mais",
+        "next": "explore_shadow_hall"
+      },
+      {
+        "choice": "Sair da cidade subterrânea",
+        "next": "explore_mountain_base"
+      }
+    ]
+  },
+  "visit_ancestral_forge": {
+    "description": "A Forja dos Ancestrais é uma caverna de fogo e metal, onde os anões criaram suas maiores obras. No centro da forja, ainda há uma arma inacabada, brilhando com uma luz azulada, como se estivesse esperando por alguém para terminá-la.",
+    "options": [
+      {
+        "choice": "Tentar completar a arma",
+        "next": "complete_ancestral_weapon"
+      },
+      {
+        "choice": "Procurar por outros itens na forja",
+        "next": "search_forge_items"
+      },
+      {
+        "choice": "Deixar a forja e explorar outra parte da cidade",
+        "next": "explore_dwarven_city"
+      }
+    ]
+  },
+  "complete_ancestral_weapon": {
+    "description": "Você tenta completar a arma usando os materiais e ferramentas disponíveis na forja. O processo é difícil e arriscado, mas após horas de trabalho, a arma finalmente se completa, emitindo um brilho intenso.",
+    "effects": {
+      "gain_item": {
+        "name": "Lâmina dos Ancestrais",
+        "weight": 3,
+        "cost": 1000
+      }
+    },
+    "options": [
+      {
+        "choice": "Pegar a lâmina e sair da forja",
+        "next": "explore_dwarven_city"
+      },
+      {
+        "choice": "Continuar explorando a forja",
+        "next": "search_forge_items"
+      }
+    ]
+  },
+  "search_forge_items": {
+    "description": "Você vasculha a forja e encontra diversos itens valiosos, como armaduras antigas e gemas raras. Entre eles, há uma gema que parece irradiar uma energia misteriosa, diferente das outras.",
+    "effects": {
+      "gain_item": {
+        "name": "Gema Misteriosa",
+        "weight": 0.5,
+        "cost": 700
+      }
+    },
+    "options": [
+      {
+        "choice": "Pegar os itens e sair da forja",
+        "next": "explore_dwarven_city"
+      },
+      {
+        "choice": "Tentar usar a gema para melhorar uma arma",
+        "next": "use_gem_enhance_weapon"
+      }
+    ]
+  },
+  "use_gem_enhance_weapon": {
+    "description": "Você tenta usar a gema para aprimorar uma de suas armas. O processo é instável, e há risco de danificar a arma, mas se for bem-sucedido, a arma pode se tornar extremamente poderosa.",
+    "effects": {
+      "improve_item": {
+        "name": "Lâmina dos Ancestrais",
+        "enhancement": "+5"
+      }
+    },
+    "options": [
+      {
+        "choice": "Pegar a arma aprimorada e sair da forja",
+        "next": "explore_dwarven_city"
+      },
+      {
+        "choice": "Continuar explorando a forja",
+        "next": "search_forge_items"
+      }
+    ]
+  },
+  "search_forgotten_archive": {
+    "description": "O Arquivo Esquecido é uma vasta biblioteca de livros e pergaminhos, muitos dos quais estão desintegrados com o tempo. Você começa a vasculhar as prateleiras, na esperança de encontrar algo que possa ser útil.",
+    "options": [
+      {
+        "choice": "Procurar informações sobre a entidade despertada",
+        "next": "search_entity_info"
+      },
+      {
+        "choice": "Procurar segredos da cidade",
+        "next": "search_city_secrets"
+      },
+      {
+        "choice": "Deixar o arquivo e explorar outra parte da cidade",
+        "next": "explore_dwarven_city"
+      }
+    ]
+  },
+  "search_entity_info": {
+    "description": "Você encontra um pergaminho antigo que descreve a entidade que os anões acidentalmente despertaram. A entidade, conhecida como 'Sombra da Profundeza', é um espírito vingativo, que se alimenta da escuridão e do desespero. Os anões tentaram combatê-la, mas acabaram selando-a novamente nas profundezas, temendo sua fúria.",
+    "options": [
+      {
+        "choice": "Procurar mais informações",
+        "next": "search_city_secrets"
+      },
+      {
+        "choice": "Sair do arquivo e explorar outra parte da cidade",
+        "next": "explore_dwarven_city"
+      }
+    ]
+  },
+  "search_city_secrets": {
+    "description": "Ao continuar sua busca, você encontra um mapa detalhado da cidade e uma chave de prata, que parece abrir uma porta secreta em algum lugar dos Salões do Conselho.",
+    "effects": {
+      "gain_item": {
+        "name": "Chave de Prata",
+        "weight": 0.1,
+        "cost": 200
+      }
+    },
+    "options": [
+      {
+        "choice": "Explorar o Salão das Sombras usando a chave",
+        "next": "explore_shadow_hall_with_key"
+      },
+      {
+        "choice": "Sair do arquivo e explorar outra parte da cidade",
+        "next": "explore_dwarven_city"
+      }
+    ]
+  },
+  "explore_city_deep": {
+    "description": "Você se aventura mais fundo na cidade, chegando a áreas que os anões selaram há muito tempo. As paredes estão cobertas de runas antigas e o ar é denso com uma energia opressora. A escuridão aqui parece ter uma vida própria.",
+    "options": [
+      {
+        "choice": "Entrar no Salão das Sombras",
+        "next": "explore_shadow_hall"
+      },
+      {
+        "choice": "Explorar outra parte da cidade",
+        "next": "explore_dwarven_city"
+      }
+    ]
+  },
+  "explore_shadow_hall": {
+    "description": "O Salão das Sombras é um lugar proibido, onde os anões acreditavam que forças malignas residiam. O ar é frio e carregado de uma energia sombria. À medida que avança, você sente a presença de algo antigo e poderoso.",
+    "options": [
+      {
+        "choice": "Explorar as profundezas do salão",
+        "next": "explore_shadow_depths"
+      },
+      {
+        "choice": "Voltar e sair da cidade",
+        "next": "explore_mountain_base"
+      }
+    ]
+  },
+  "explore_shadow_hall_with_key": {
+    "description": "Usando a chave de prata encontrada no arquivo, você abre uma porta secreta no Salão das Sombras. A passagem leva a uma câmara oculta, onde algo muito antigo e perigoso está selado.",
+    "options": [
+      {
+        "choice": "Entrar na câmara oculta",
+        "next": "enter_hidden_chamber"
+      },
+      {
+        "choice": "Fechar a porta e sair do Salão das Sombras",
+        "next": "explore_dwarven_city"
+      }
+    ]
+  },
+  "enter_hidden_chamber": {
+    "description": "A câmara oculta é pequena, mas intensa. No centro, há um pedestal com um artefato estranho, emitindo uma luz pulsante. Você sente que este artefato é crucial para entender ou controlar a entidade despertada.",
+    "effects": {
+      "gain_item": {
+        "name": "Artefato Sombra da Profundeza",
+        "weight": 2,
+        "cost": 1500
+      }
+    },
+    "options": [
+      {
+        "choice": "Pegar o artefato e sair rapidamente",
+        "next": "escape_dwarven_city"
+      },
+      {
+        "choice": "Estudar o artefato mais de perto",
+        "next": "study_shadow_artifact"
+      }
+    ]
+  },
+  "escape_dwarven_city": {
+    "description": "Você pega o artefato e começa a sair rapidamente da cidade. No entanto, a presença maligna que permeia o lugar parece estar ciente do que você carrega, e começa a fechar os caminhos, tentando prendê-lo nas profundezas.",
+    "effects": {
+      "trigger_event": {
+        "name": "Fuga Desesperada",
+        "difficulty": "Muito Alto"
+      }
+    },
+    "options": [
+      {
+        "choice": "Correr para os portões da cidade",
+        "next": "flee_to_gates"
+      },
+      {
+        "choice": "Tentar encontrar outro caminho de saída",
+        "next": "find_alternate_exit"
+      }
+    ]
+  },
+  "study_shadow_artifact": {
+    "description": "Você decide estudar o artefato ali mesmo, dentro da câmara. O objeto parece pulsar em sintonia com as batidas do seu coração, e enquanto você se concentra, ele começa a revelar sua natureza: é um fragmento da essência da própria entidade que os anões selaram.",
+    "options": [
+      {
+        "choice": "Pegar o artefato e sair rapidamente",
+        "next": "escape_dwarven_city"
+      },
+      {
+        "choice": "Tentar usar o artefato para controlar a entidade",
+        "next": "attempt_artifact_control"
+      }
+    ]
+  },
+  "attempt_artifact_control": {
+    "description": "Você tenta usar o artefato para controlar a entidade. À medida que o poder do objeto começa a fluir através de você, você sente que pode dobrar a entidade à sua vontade. No entanto, há um risco imenso de ser consumido por esse poder.",
+    "effects": {
+      "trigger_event": {
+        "name": "Confronto de Vontades",
+        "difficulty": "Extremo"
+      }
+    },
+    "options": [
+      {
+        "choice": "Prosseguir e tentar controlar a entidade",
+        "next": "successfully_control_entity"
+      },
+      {
+        "choice": "Desistir e sair rapidamente",
+        "next": "escape_dwarven_city"
+      }
+    ]
+  },
+  "successfully_control_entity": {
+    "description": "Contra todas as probabilidades, você consegue subjugar a vontade da entidade. O artefato agora responde à sua vontade, dando-lhe poder sobre a Sombra da Profundeza. No entanto, esse poder tem um preço, e você sente que a linha entre controlador e controlado é muito tênue.",
+    "effects": {
+      "gain_skill": {
+        "name": "Domínio da Sombra",
+        "level": 1
+      }
+    },
+    "options": [
+      {
+        "choice": "Deixar a câmara e sair da cidade",
+        "next": "escape_dwarven_city"
+      },
+      {
+        "choice": "Explorar a cidade com seu novo poder",
+        "next": "explore_dwarven_city_with_power"
+      }
+    ]
+  },
+  "explore_dwarven_city_with_power": {
+    "description": "Agora que você tem o poder da entidade sob seu controle, a cidade subterrânea parece menos opressora. No entanto, você sabe que outras forças podem estar cientes do que você conquistou, e podem tentar tirar isso de você.",
+    "options": [
+      {
+        "choice": "Explorar o Salão das Sombras com seu novo poder",
+        "next": "explore_shadow_hall_with_power"
+      },
+      {
+        "choice": "Sair da cidade subterrânea",
+        "next": "explore_mountain_base"
+      }
+    ]
+  }
+}

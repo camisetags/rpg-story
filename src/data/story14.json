@@ -1,0 +1,74 @@
+{
+  "explore_village": {
+    "description": "A vila de Arundell é pequena, mas cheia de história...",
+    "options": [
+      {
+        "choice": "Visitar a forja de Gorak",
+        "next": "visit_blacksmith"
+      },
+      {
+        "choice": "Ir até a taverna de Garrett",
+        "next": "visit_tavern"
+      },
+      {
+        "choice": "Explorar a loja do mercador Lorik",
+        "next": "visit_merchant"
+      },
+      {
+        "choice": "Conversar com os aldeões na praça central",
+        "next": "talk_villagers"
+      },
+      {
+        "choice": "Visitar a casa do sábio local, Elowen",
+        "next": "visit_sage"
+      },
+      {
+        "choice": "Explorar os arredores da vila",
+        "next": "explore_outskirts"
+      }
+    ]
+  },
+  "explore_outskirts": {
+    "description": "Explorando os arredores da vila...",
+    "options": [
+      {
+        "choice": "Seguir o caminho para as Montanhas Gélidas",
+        "next": "explore_mountain_base"
+      },
+      {
+        "choice": "Aventurar-se pelo Deserto das Almas Perdidas",
+        "next": "desert_lost_souls_entrance"
+      }
+    ]
+  },
+  "explore_mountain_base": {
+    "description": "Explorando a base das Montanhas Gélidas...",
+    "options": [
+      {
+        "choice": "Entrar na passagem oculta e descer para a Cidade Subterrânea dos Anões",
+        "next": "enter_dwarven_city"
+      },
+      {
+        "choice": "Subir para explorar o pico das montanhas",
+        "next": "explore_mountain_peak"
+      },
+      {
+        "choice": "Retornar ao deserto",
+        "next": "desert_lost_souls_entrance"
+      }
+    ]
+  },
+  "desert_lost_souls_entrance": {
+    "description": "Você se encontra na entrada do Deserto das Almas Perdidas...",
+    "options": [
+      {
+        "choice": "Explorar o deserto",
+        "next": "explore_desert_wasteland"
+      },
+      {
+        "choice": "Voltar para as Montanhas Gélidas",
+        "next": "explore_mountain_base"
+      }
+    ]
+  }
+}

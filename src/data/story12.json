@@ -1,0 +1,224 @@
+{
+  "explore_shadow_forest_entrance": {
+    "description": "Enquanto explora os arredores da Floresta das Sombras, você encontra um viajante solitário que conta histórias sobre um deserto amaldiçoado, ao sul das montanhas. Ele fala de ruínas antigas e de espíritos que nunca encontraram descanso. Intrigado, você decide seguir essas histórias e explorar o Deserto das Almas Perdidas.",
+    "options": [
+      {
+        "choice": "Seguir para o Deserto das Almas Perdidas",
+        "next": "desert_lost_souls_entrance"
+      },
+      {
+        "choice": "Voltar e explorar outras partes da floresta",
+        "next": "explore_shadow_forest"
+      }
+    ]
+  },
+  "desert_lost_souls_entrance": {
+    "description": "Você chega ao Deserto das Almas Perdidas. O calor é implacável, e o vento sopra uma areia fina que parece penetrar até nos menores espaços de sua armadura. À sua frente, você vê ruínas antigas emergindo das dunas, como se o próprio deserto estivesse revelando segredos escondidos.",
+    "options": [
+      {
+        "choice": "Explorar as Ruínas de Amon-Kar",
+        "next": "explore_ruins_amon_kar"
+      },
+      {
+        "choice": "Procurar por um oásis",
+        "next": "search_for_oasis"
+      },
+      {
+        "choice": "Explorar o deserto em busca de algo incomum",
+        "next": "explore_desert_wasteland"
+      }
+    ]
+  },
+  "explore_ruins_amon_kar": {
+    "description": "As Ruínas de Amon-Kar são tudo o que resta de uma cidade que outrora foi grandiosa. Pilares de pedra erguem-se em direção ao céu, e hieróglifos antigos cobrem as paredes quebradas. Há uma sensação de que algo, ou alguém, ainda vigia essas ruínas.",
+    "options": [
+      {
+        "choice": "Investigar os hieróglifos nas paredes",
+        "next": "examine_hieroglyphs"
+      },
+      {
+        "choice": "Explorar o centro da cidade em ruínas",
+        "next": "explore_ruins_center"
+      },
+      {
+        "choice": "Deixar as ruínas e explorar outra área do deserto",
+        "next": "desert_lost_souls_entrance"
+      }
+    ]
+  },
+  "examine_hieroglyphs": {
+    "description": "Os hieróglifos parecem contar a história de uma grande guerra entre deuses e mortais, onde algo terrível foi selado para impedir sua destruição. No entanto, as inscrições estão incompletas, como se alguém ou algo tivesse deliberadamente apagado parte da história.",
+    "options": [
+      {
+        "choice": "Continuar a investigar as ruínas",
+        "next": "explore_ruins_center"
+      },
+      {
+        "choice": "Deixar as ruínas e explorar outra área do deserto",
+        "next": "desert_lost_souls_entrance"
+      }
+    ]
+  },
+  "explore_ruins_center": {
+    "description": "No centro das ruínas, você encontra um altar destruído, coberto de areia e detritos. No entanto, há algo de estranho no ar, como se uma presença invisível estivesse observando seus movimentos. Ao investigar mais de perto, você encontra um fragmento de um antigo artefato.",
+    "effects": {
+      "gain_item": {
+        "name": "Fragmento de Artefato Antigo",
+        "weight": 1,
+        "cost": 500
+      }
+    },
+    "options": [
+      {
+        "choice": "Explorar mais as ruínas",
+        "next": "deeper_ruins_exploration"
+      },
+      {
+        "choice": "Deixar as ruínas e explorar outra área do deserto",
+        "next": "desert_lost_souls_entrance"
+      }
+    ]
+  },
+  "deeper_ruins_exploration": {
+    "description": "Você continua explorando as ruínas e encontra uma passagem oculta que leva para baixo, para uma câmara subterrânea. A câmara está escura e cheia de armadilhas antigas, mas também parece conter segredos que podem ser cruciais para sua missão.",
+    "options": [
+      {
+        "choice": "Entrar na câmara subterrânea",
+        "next": "enter_subterranean_chamber"
+      },
+      {
+        "choice": "Voltar para a superfície",
+        "next": "desert_lost_souls_entrance"
+      }
+    ]
+  },
+  "enter_subterranean_chamber": {
+    "description": "A câmara subterrânea é fria e silenciosa, com paredes cobertas por inscrições ainda mais antigas do que as da superfície. No centro, um pedestal segurando um amuleto que emite uma leve luz azulada. No entanto, ao se aproximar, você sente que algo poderoso está preso aqui.",
+    "effects": {
+      "gain_item": {
+        "name": "Amuleto das Almas Perdidas",
+        "weight": 1,
+        "cost": 1500
+      },
+      "trigger_event": {
+        "name": "Despertar do Guardião",
+        "difficulty": "Alto"
+      }
+    },
+    "options": [
+      {
+        "choice": "Pegar o amuleto",
+        "next": "take_soul_amulet"
+      },
+      {
+        "choice": "Sair da câmara sem tocar no amuleto",
+        "next": "desert_lost_souls_entrance"
+      }
+    ]
+  },
+  "take_soul_amulet": {
+    "description": "Ao pegar o amuleto, você sente uma onda de poder percorrer seu corpo. No entanto, ao fazê-lo, o guardião do amuleto desperta: uma entidade poderosa e furiosa, presa por séculos, agora livre para cobrar seu tributo.",
+    "effects": {
+      "trigger_event": {
+        "name": "Batalha com o Guardião",
+        "difficulty": "Muito Alto"
+      }
+    },
+    "options": [
+      {
+        "choice": "Lutar contra o guardião",
+        "next": "fight_guardian"
+      },
+      {
+        "choice": "Fugir antes que o guardião o alcance",
+        "next": "flee_guardian"
+      }
+    ]
+  },
+  "fight_guardian": {
+    "description": "A luta contra o guardião é intensa e mortal. A entidade usa poderes antigos para tentar destruí-lo, mas com habilidade e sorte, você consegue derrotá-lo, deixando a câmara em ruínas.",
+    "effects": {
+      "health_loss": {
+        "amount": 40
+      }
+    },
+    "options": [
+      {
+        "choice": "Deixar a câmara e retornar à superfície",
+        "next": "desert_lost_souls_entrance"
+      }
+    ]
+  },
+  "flee_guardian": {
+    "description": "Decidindo que a luta é arriscada demais, você corre para fora da câmara, ouvindo os rugidos furiosos do guardião enquanto a estrutura começa a desmoronar atrás de você. Você escapa por pouco, mas sente que a entidade ainda o espreita.",
+    "effects": {
+      "health_loss": {
+        "amount": 15
+      }
+    },
+    "options": [
+      {
+        "choice": "Voltar para a superfície",
+        "next": "desert_lost_souls_entrance"
+      }
+    ]
+  },
+  "search_for_oasis": {
+    "description": "Você caminha pelo deserto em busca de um oásis. O calor é intenso, e a sede começa a incomodar. Após horas de caminhada, você finalmente avista o que parece ser um oásis à distância.",
+    "options": [
+      {
+        "choice": "Aproximar-se do oásis",
+        "next": "approach_oasis"
+      },
+      {
+        "choice": "Ignorar e continuar explorando o deserto",
+        "next": "explore_desert_wasteland"
+      }
+    ]
+  },
+  "approach_oasis": {
+    "description": "À medida que você se aproxima do oásis, a visão parece oscilar e mudar. O que parecia ser um local seguro agora parece distorcido e sombrio. Algo não está certo aqui.",
+    "options": [
+      {
+        "choice": "Investigar mais de perto",
+        "next": "investigate_oasis"
+      },
+      {
+        "choice": "Sair rapidamente e procurar outro caminho",
+        "next": "explore_desert_wasteland"
+      }
+    ]
+  },
+  "investigate_oasis": {
+    "description": "Ao investigar o oásis, você percebe que ele está envolto em uma ilusão mágica. Sob a superfície, o oásis é um poço de sombras, onde almas perdidas vagam em tormento eterno. Algo maligno está mantendo essas almas presas aqui.",
+    "options": [
+      {
+        "choice": "Tentar libertar as almas",
+        "next": "free_souls_oasis"
+      },
+      {
+        "choice": "Sair do oásis e continuar explorando",
+        "next": "explore_desert_wasteland"
+      }
+    ]
+  },
+  "free_souls_oasis": {
+    "description": "Você tenta usar o amuleto encontrado na câmara subterrânea para libertar as almas presas no oásis. Um vento gelado percorre o lugar enquanto as almas começam a ser libertadas, mas isso também atrai a atenção de uma criatura das sombras.",
+    "effects": {
+      "trigger_event": {
+        "name": "Encontro com a Criatura das Sombras",
+        "difficulty": "Alto"
+      }
+    },
+    "options": [
+      {
+        "choice": "Lutar contra a criatura das sombras",
+        "next": "fight_shadow_creature"
+      },
+      {
+        "choice": "Fugir do oásis amaldiçoado",
+        "next": "flee_shadow_creature"
+      }
+    ]
+  }
+}

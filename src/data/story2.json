@@ -1,0 +1,120 @@
+{
+  "explore_doom_mountains": {
+    "description": "As Montanhas da Perdição são um local inóspito, conhecido por seus penhascos íngremes e tempestades repentinas. No entanto, há rumores de que uma antiga força está escondida aqui, protegida por perigos desconhecidos.",
+    "options": [
+      {
+        "choice": "Subir até o topo da montanha",
+        "next": "climb_mountain_peak"
+      },
+      {
+        "choice": "Explorar uma caverna próxima",
+        "next": "explore_nearby_cave"
+      },
+      {
+        "choice": "Explorar a Fortaleza Abandonada",
+        "next": "explore_fortress"
+      },
+      {
+        "choice": "Voltar para os arredores da vila",
+        "next": "explore_outskirts"
+      }
+    ]
+  },
+  "explore_nearby_cave": {
+    "description": "A caverna próxima à montanha é escura e profunda. Sons estranhos ecoam pelas paredes, e você tem a sensação de que há algo mais lá dentro, algo que não quer ser encontrado.",
+    "options": [
+      {
+        "choice": "Entrar mais fundo na caverna",
+        "next": "explore_cave_depths"
+      },
+      {
+        "choice": "Explorar a Caverna Oculta",
+        "next": "explore_hidden_cave"
+      },
+      {
+        "choice": "Sair da caverna",
+        "next": "explore_doom_mountains"
+      }
+    ]
+  },
+  "explore_black_forest": {
+    "description": "A Floresta Negra é densa e misteriosa. As árvores antigas bloqueiam a luz do sol, e há uma sensação constante de que você está sendo observado. Mais adiante, você vê uma trilha que parece levar a um Templo Esquecido.",
+    "options": [
+      {
+        "choice": "Seguir a trilha até o Templo Esquecido",
+        "next": "explore_forgotten_temple"
+      },
+      {
+        "choice": "Explorar o Vale Misterioso",
+        "next": "explore_valley"
+      },
+      {
+        "choice": "Explorar as profundezas da floresta",
+        "next": "explore_forest_depths"
+      },
+      {
+        "choice": "Voltar para os arredores da vila",
+        "next": "explore_outskirts"
+      }
+    ]
+  },
+  "explore_forgotten_temple": {
+    "description": "Você segue a trilha até o Templo Esquecido, um antigo local de culto agora abandonado. As paredes estão cobertas de musgo e inscrições antigas. Há uma entrada que parece levar para uma câmara subterrânea.",
+    "options": [
+      {
+        "choice": "Entrar na câmara subterrânea",
+        "next": "explore_underground_chamber"
+      },
+      {
+        "choice": "Examinar as inscrições nas paredes",
+        "next": "examine_wall_inscriptions"
+      },
+      {
+        "choice": "Voltar para a Floresta Negra",
+        "next": "explore_black_forest"
+      }
+    ]
+  },
+  "explore_lost_city": {
+    "description": "A Cidade Perdida se revela como um vasto complexo subterrâneo, com templos, praças e ruínas antigas. O ambiente é misterioso e você sente que segredos há muito esquecidos estão enterrados aqui.",
+    "options": [
+      {
+        "choice": "Explorar o Templo da Cidade Perdida",
+        "next": "explore_lost_city_temple"
+      },
+      {
+        "choice": "Visitar a Praça Central",
+        "next": "explore_lost_city_square"
+      },
+      {
+        "choice": "Explorar a Caverna Oculta",
+        "next": "explore_hidden_cave"
+      },
+      {
+        "choice": "Explorar o Vale Misterioso",
+        "next": "explore_valley"
+      },
+      {
+        "choice": "Voltar para os túneis",
+        "next": "explore_tunnels"
+      }
+    ]
+  },
+  "explore_hidden_cave": {
+    "description": "A Caverna Oculta é um local sombrio e misterioso, protegido por cultistas que veneram um poder antigo. Nas profundezas da caverna, rituais antigos ainda são realizados.",
+    "options": [
+      {
+        "choice": "Explorar o santuário dos cultistas",
+        "next": "explore_cult_sanctuary"
+      },
+      {
+        "choice": "Voltar para a Cidade Perdida",
+        "next": "explore_lost_city"
+      },
+      {
+        "choice": "Sair da caverna",
+        "next": "explore_doom_mountains"
+      }
+    ]
+  }
+}

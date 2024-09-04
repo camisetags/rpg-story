@@ -1,0 +1,232 @@
+{
+  "explore_shadow_forest_entrance": {
+    "description": "Você encontra a entrada para a Floresta das Sombras. As árvores aqui são ainda mais altas e densas do que na Floresta Negra. A atmosfera é pesada, como se a própria floresta estivesse viva, observando seus passos.",
+    "options": [
+      {
+        "choice": "Entrar na Floresta das Sombras",
+        "next": "explore_shadow_forest"
+      },
+      {
+        "choice": "Voltar para o Deserto Místico",
+        "next": "explore_mystic_desert"
+      },
+      {
+        "choice": "Voltar para o Templo Subterrâneo",
+        "next": "explore_subterranean_temple"
+      },
+      {
+        "choice": "Voltar para a Floresta Negra",
+        "next": "explore_black_forest"
+      }
+    ]
+  },
+  "explore_shadow_forest": {
+    "description": "A Floresta das Sombras é um lugar de mistério e perigo. As árvores parecem sussurrar segredos antigos, e a luz do sol é quase inexistente aqui. Cada passo que você dá parece ecoar na escuridão.",
+    "options": [
+      {
+        "choice": "Explorar uma clareira estranha",
+        "next": "explore_strange_clearing"
+      },
+      {
+        "choice": "Seguir um rastro de luzes misteriosas",
+        "next": "follow_mysterious_lights"
+      },
+      {
+        "choice": "Buscar o coração da floresta",
+        "next": "explore_forest_heart"
+      },
+      {
+        "choice": "Voltar para a entrada da floresta",
+        "next": "explore_shadow_forest_entrance"
+      }
+    ]
+  },
+  "explore_strange_clearing": {
+    "description": "Você chega a uma clareira no meio da Floresta das Sombras. No centro, há um altar antigo coberto de musgo. A atmosfera aqui é ainda mais densa, como se o tempo estivesse parado.",
+    "options": [
+      {
+        "choice": "Investigar o altar",
+        "next": "investigate_forest_altar"
+      },
+      {
+        "choice": "Voltar para a floresta",
+        "next": "explore_shadow_forest"
+      }
+    ]
+  },
+  "investigate_forest_altar": {
+    "description": "Ao investigar o altar, você percebe que ele é coberto por inscrições antigas que falam de um ritual para se comunicar com os espíritos da floresta. No entanto, realizar o ritual pode ter consequências imprevistas.",
+    "options": [
+      {
+        "choice": "Realizar o ritual",
+        "next": "perform_ritual"
+      },
+      {
+        "choice": "Deixar o altar e voltar para a floresta",
+        "next": "explore_shadow_forest"
+      }
+    ]
+  },
+  "perform_ritual": {
+    "description": "Você decide realizar o ritual. Ao entoar as palavras antigas, a floresta ao redor começa a se agitar. Espíritos aparecem, mas ao invés de serem amigáveis, eles parecem furiosos por terem sido perturbados.",
+    "effects": {
+      "trigger_event": {
+        "name": "Ataque dos Espíritos",
+        "difficulty": "Alto"
+      }
+    },
+    "options": [
+      {
+        "choice": "Lutar contra os espíritos",
+        "next": "fight_forest_spirits"
+      },
+      {
+        "choice": "Fugir para a segurança da floresta",
+        "next": "explore_shadow_forest"
+      }
+    ]
+  },
+  "fight_forest_spirits": {
+    "description": "Os espíritos atacam com fúria, e você deve usar todas as suas habilidades para combatê-los. A luta é intensa, e cada movimento errado pode ser fatal.",
+    "effects": {
+      "health_loss": {
+        "amount": 15
+      }
+    },
+    "options": [
+      {
+        "choice": "Sobreviver à luta e continuar explorando",
+        "next": "explore_shadow_forest"
+      },
+      {
+        "choice": "Recuperar-se e voltar para a entrada da floresta",
+        "next": "explore_shadow_forest_entrance"
+      }
+    ]
+  },
+  "follow_mysterious_lights": {
+    "description": "Você decide seguir as luzes misteriosas que dançam entre as árvores. Elas parecem guiá-lo mais profundamente na floresta, até que você chega a um antigo círculo de pedras.",
+    "options": [
+      {
+        "choice": "Investigar o círculo de pedras",
+        "next": "investigate_stone_circle"
+      },
+      {
+        "choice": "Voltar para a floresta",
+        "next": "explore_shadow_forest"
+      }
+    ]
+  },
+  "investigate_stone_circle": {
+    "description": "O círculo de pedras é antigo e coberto de musgo. Ao centro, há um pedestal com uma pedra brilhante. A atmosfera ao redor é pesada, como se o tempo tivesse parado.",
+    "options": [
+      {
+        "choice": "Tocar a pedra brilhante",
+        "next": "touch_glowing_stone"
+      },
+      {
+        "choice": "Deixar o círculo de pedras e voltar para a floresta",
+        "next": "explore_shadow_forest"
+      }
+    ]
+  },
+  "touch_glowing_stone": {
+    "description": "Ao tocar a pedra brilhante, você sente uma onda de poder percorrer seu corpo. No entanto, essa energia também atraiu a atenção de forças sombrias que habitam a floresta.",
+    "effects": {
+      "gain_item": {
+        "name": "Pedra Brilhante",
+        "weight": 0.2,
+        "cost": 500
+      }
+    },
+    "options": [
+      {
+        "choice": "Enfrentar as forças sombrias",
+        "next": "face_dark_forces"
+      },
+      {
+        "choice": "Fugir para a segurança da floresta",
+        "next": "explore_shadow_forest"
+      }
+    ]
+  },
+  "face_dark_forces": {
+    "description": "As forças sombrias emergem das sombras ao redor do círculo de pedras. Elas são poderosas e implacáveis, e você deve lutar com todas as suas forças para sobreviver.",
+    "effects": {
+      "health_loss": {
+        "amount": 20
+      }
+    },
+    "options": [
+      {
+        "choice": "Sobreviver à luta e continuar explorando",
+        "next": "explore_shadow_forest"
+      },
+      {
+        "choice": "Recuperar-se e voltar para a entrada da floresta",
+        "next": "explore_shadow_forest_entrance"
+      }
+    ]
+  },
+  "explore_forest_heart": {
+    "description": "Você segue por uma trilha que parece levar ao coração da Floresta das Sombras. A escuridão é opressiva, e o ar está denso com o cheiro de terra úmida e magia antiga. Eventualmente, você chega a um enorme carvalho, o maior que já viu, que parece pulsar com energia própria.",
+    "options": [
+      {
+        "choice": "Investigar o grande carvalho",
+        "next": "investigate_great_oak"
+      },
+      {
+        "choice": "Voltar para a floresta",
+        "next": "explore_shadow_forest"
+      }
+    ]
+  },
+  "investigate_great_oak": {
+    "description": "O grande carvalho parece estar vivo de uma forma que você não consegue entender completamente. Suas raízes se estendem profundamente no solo, e há uma abertura entre elas, levando a uma câmara oculta dentro da árvore.",
+    "options": [
+      {
+        "choice": "Entrar na câmara oculta",
+        "next": "enter_hidden_chamber"
+      },
+      {
+        "choice": "Deixar o carvalho e voltar para a floresta",
+        "next": "explore_shadow_forest"
+      }
+    ]
+  },
+  "enter_hidden_chamber": {
+    "description": "Você entra na câmara oculta dentro do grande carvalho. No interior, encontra uma fonte de água cristalina, cercada por raízes que emanam uma luz suave. A água parece ter propriedades curativas, mas beber dela pode ter consequências desconhecidas.",
+    "options": [
+      {
+        "choice": "Beber da água da fonte",
+        "next": "drink_fountain_water"
+      },
+      {
+        "choice": "Sair da câmara e voltar para a floresta",
+        "next": "explore_shadow_forest"
+      }
+    ]
+  },
+  "drink_fountain_water": {
+    "description": "Ao beber da água da fonte, você sente suas forças sendo restauradas. A água tem um sabor puro e revigorante, e você sente que algo dentro de você mudou, como se uma nova energia tivesse sido despertada.",
+    "effects": {
+      "health_restore": {
+        "amount": 20
+      },
+      "gain_skill": {
+        "name": "Bênção da Floresta",
+        "level": 1
+      }
+    },
+    "options": [
+      {
+        "choice": "Explorar mais a floresta",
+        "next": "explore_shadow_forest"
+      },
+      {
+        "choice": "Voltar para a entrada da floresta",
+        "next": "explore_shadow_forest_entrance"
+      }
+    ]
+  }
+}

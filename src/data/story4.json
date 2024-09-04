@@ -1,0 +1,48 @@
+{
+  "explore_doom_mountains": {
+    "description": "As Montanhas da Perdição são um local inóspito, conhecido por seus penhascos íngremes e tempestades repentinas. No entanto, há rumores de que uma antiga força está escondida aqui, protegida por perigos desconhecidos.",
+    "options": [
+      {
+        "choice": "Subir até o topo da montanha",
+        "next": "climb_mountain_peak"
+      },
+      {
+        "choice": "Explorar uma caverna próxima",
+        "next": "explore_nearby_cave"
+      },
+      {
+        "choice": "Explorar a Fortaleza Abandonada",
+        "next": "explore_fortress"
+      },
+      {
+        "choice": "Viajar para o Deserto Místico",
+        "next": "explore_mystic_desert"
+      },
+      {
+        "choice": "Voltar para os arredores da vila",
+        "next": "explore_outskirts"
+      }
+    ]
+  },
+  "explore_valley": {
+    "description": "O Vale Misterioso é um lugar de beleza sombria e estranha. As plantas crescem de maneira incomum, e o tempo parece se mover de forma diferente aqui. À medida que você avança, encontra uma caverna que emite uma luz suave.",
+    "options": [
+      {
+        "choice": "Explorar a caverna brilhante",
+        "next": "explore_glowing_cave"
+      },
+      {
+        "choice": "Explorar o Deserto Místico",
+        "next": "explore_mystic_desert"
+      },
+      {
+        "choice": "Explorar mais o vale",
+        "next": "explore_more_valley"
+      },
+      {
+        "choice": "Voltar para a Floresta Negra",
+        "next": "explore_black_forest"
+      }
+    ]
+  }
+}

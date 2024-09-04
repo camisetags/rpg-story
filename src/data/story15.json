@@ -1,0 +1,205 @@
+{
+  "enter_dwarven_city": {
+    "description": "Você entra na antiga cidade subterrânea dos anões...",
+    "options": [
+      {
+        "choice": "Explorar o caminho para a Fortaleza dos Dragões",
+        "next": "explore_dragon_fortress"
+      },
+      {
+        "choice": "Explorar outra parte da Cidade Subterrânea",
+        "next": "explore_dwarven_city"
+      }
+    ]
+  },
+  "explore_dragon_fortress": {
+    "description": "Após seguir um caminho escondido nas profundezas da Cidade Subterrânea dos Anões, você emerge em uma nova região: a Fortaleza dos Dragões. As montanhas ao redor são cobertas de neve, e à sua frente estão os imponentes Portões do Dragão, que brilham com uma luz avermelhada.",
+    "options": [
+      {
+        "choice": "Entrar nos Portões do Dragão",
+        "next": "enter_dragon_gate"
+      },
+      {
+        "choice": "Voltar para a Cidade Subterrânea dos Anões",
+        "next": "explore_dwarven_city"
+      }
+    ]
+  },
+  "enter_dragon_gate": {
+    "description": "Os Portões do Dragão se abrem lentamente, revelando o vasto interior da fortaleza. O ar aqui é quente e pesado, e você pode ouvir o rugido distante de criaturas antigas. À frente, você vê o Salão da Lareira Eterna, onde dizem que o fogo dos dragões nunca se apaga.",
+    "options": [
+      {
+        "choice": "Explorar o Salão da Lareira Eterna",
+        "next": "explore_everfire_hall"
+      },
+      {
+        "choice": "Procurar a Câmara dos Ossos",
+        "next": "explore_bone_chamber"
+      },
+      {
+        "choice": "Ir até a Cova de Valthor, o Dragão Ancestral",
+        "next": "explore_valthor_cave"
+      },
+      {
+        "choice": "Sair da fortaleza e voltar à Cidade Subterrânea",
+        "next": "explore_dwarven_city"
+      }
+    ]
+  },
+  "explore_everfire_hall": {
+    "description": "O Salão da Lareira Eterna é iluminado por uma chama mágica que brilha com uma luz azul. O calor é intenso, mas não queima. No centro do salão, há um altar onde os dragões costumavam realizar rituais antigos.",
+    "options": [
+      {
+        "choice": "Examinar o altar",
+        "next": "examine_altar"
+      },
+      {
+        "choice": "Explorar mais o salão",
+        "next": "explore_everfire_depths"
+      },
+      {
+        "choice": "Voltar para os Portões do Dragão",
+        "next": "enter_dragon_gate"
+      }
+    ]
+  },
+  "examine_altar": {
+    "description": "O altar parece pulsar com uma energia antiga. Ao tocá-lo, você sente uma conexão com os dragões ancestrais. Gravado na pedra está um mapa que indica a localização de algo chamado 'Coração de Valthor', uma joia poderosa capaz de controlar o fogo dos dragões.",
+    "options": [
+      {
+        "choice": "Seguir o mapa e buscar o Coração de Valthor",
+        "next": "search_valthor_heart"
+      },
+      {
+        "choice": "Deixar o altar e explorar outra parte da fortaleza",
+        "next": "enter_dragon_gate"
+      }
+    ]
+  },
+  "search_valthor_heart": {
+    "description": "Seguindo o mapa gravado no altar, você se aventura mais fundo na fortaleza, chegando a uma câmara escondida onde uma joia gigante e flamejante repousa em um pedestal de obsidiana. Este é o Coração de Valthor.",
+    "effects": {
+      "gain_item": {
+        "name": "Coração de Valthor",
+        "weight": 2,
+        "cost": 2000
+      }
+    },
+    "options": [
+      {
+        "choice": "Pegar o Coração de Valthor e sair da câmara",
+        "next": "enter_dragon_gate"
+      },
+      {
+        "choice": "Estudar a joia para entender melhor seu poder",
+        "next": "study_valthor_heart"
+      }
+    ]
+  },
+  "study_valthor_heart": {
+    "description": "Você decide estudar a joia antes de pegá-la. Ao se concentrar, sente a energia do Coração de Valthor fluindo em você. A joia contém o poder de controlar o fogo dos dragões, mas também carrega uma maldição: qualquer um que a use sem a devida sabedoria corre o risco de ser consumido pelas chamas.",
+    "options": [
+      {
+        "choice": "Pegar a joia, mesmo ciente do risco",
+        "next": "take_valthor_heart"
+      },
+      {
+        "choice": "Deixar a joia no pedestal e sair",
+        "next": "enter_dragon_gate"
+      }
+    ]
+  },
+  "take_valthor_heart": {
+    "description": "Você pega o Coração de Valthor. A joia brilha intensamente, e você sente um calor profundo se espalhando por seu corpo. Agora, você tem o poder de controlar o fogo dos dragões, mas a maldição da joia permanece.",
+    "effects": {
+      "gain_item": {
+        "name": "Coração de Valthor",
+        "weight": 2,
+        "cost": 2000
+      }
+    },
+    "options": [
+      {
+        "choice": "Sair da câmara com o Coração de Valthor",
+        "next": "enter_dragon_gate"
+      },
+      {
+        "choice": "Estudar a joia mais profundamente",
+        "next": "study_valthor_heart_deep"
+      }
+    ]
+  },
+  "explore_bone_chamber": {
+    "description": "A Câmara dos Ossos é um lugar solene, onde os restos mortais dos guerreiros caídos e dos dragões que morreram em batalha repousam. O silêncio é profundo, e você sente uma presença antiga e respeitosa observando você.",
+    "options": [
+      {
+        "choice": "Procurar relíquias entre os ossos",
+        "next": "search_bone_relics"
+      },
+      {
+        "choice": "Realizar um ritual de respeito aos mortos",
+        "next": "perform_bone_ritual"
+      },
+      {
+        "choice": "Sair da câmara e explorar outra parte da fortaleza",
+        "next": "enter_dragon_gate"
+      }
+    ]
+  },
+  "search_bone_relics": {
+    "description": "Vasculhando entre os restos, você encontra uma relíquia antiga: uma espada esculpida a partir das escamas de um dragão. A espada emite uma leve vibração, como se estivesse viva.",
+    "effects": {
+      "gain_item": {
+        "name": "Espada Escamada do Dragão",
+        "weight": 4,
+        "cost": 1500
+      }
+    },
+    "options": [
+      {
+        "choice": "Pegar a espada e sair da câmara",
+        "next": "enter_dragon_gate"
+      },
+      {
+        "choice": "Continuar explorando a Câmara dos Ossos",
+        "next": "explore_bone_chamber"
+      }
+    ]
+  },
+  "perform_bone_ritual": {
+    "description": "Você realiza um antigo ritual de respeito aos mortos, entoando palavras esquecidas e fazendo uma oferenda de fogo. Os ossos no salão começam a brilhar fracamente, e você sente uma bênção se espalhar pelo seu corpo.",
+    "effects": {
+      "gain_skill": {
+        "name": "Bênção dos Ancestrais",
+        "level": 1
+      }
+    },
+    "options": [
+      {
+        "choice": "Sair da câmara e explorar outra parte da fortaleza",
+        "next": "enter_dragon_gate"
+      },
+      {
+        "choice": "Permanecer na câmara e meditar",
+        "next": "meditate_bone_chamber"
+      }
+    ]
+  },
+  "explore_valthor_cave": {
+    "description": "A Cova de Valthor é vasta e silenciosa. No centro, repousa o imenso dragão Valthor, cujas escamas negras brilham à luz fraca do lugar. Valthor é um dos dragões mais antigos ainda vivos, e ele guarda segredos que podem mudar o destino de seu mundo.",
+    "options": [
+      {
+        "choice": "Falar com Valthor",
+        "next": "talk_valthor"
+      },
+      {
+        "choice": "Atacar Valthor e tentar derrotá-lo",
+        "next": "attack_valthor"
+      },
+      {
+        "choice": "Sair da cova e explorar outra parte da fortaleza",
+        "next": "enter_dragon_gate"
+      }
+    ]
+  }
+}

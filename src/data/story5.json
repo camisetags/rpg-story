@@ -1,0 +1,167 @@
+{
+  "explore_mystic_desert": {
+    "description": "O Deserto Místico se estende diante de você, com dunas de areia dourada que parecem sussurrar enquanto o vento as molda. No horizonte, você pode ver um oásis brilhando sob o sol escaldante.",
+    "options": [
+      {
+        "choice": "Explorar o Oásis Encantado",
+        "next": "explore_enchanted_oasis"
+      },
+      {
+        "choice": "Buscar o Templo Subterrâneo",
+        "next": "explore_subterranean_temple"
+      },
+      {
+        "choice": "Voltar para as Montanhas da Perdição",
+        "next": "explore_doom_mountains"
+      },
+      {
+        "choice": "Voltar para o Vale Misterioso",
+        "next": "explore_valley"
+      }
+    ]
+  },
+  "explore_enchanted_oasis": {
+    "description": "O Oásis Encantado é uma visão surreal em meio ao deserto. As águas cristalinas refletem o céu e as palmeiras ao redor. Há uma sensação de tranquilidade, mas também de que algo mágico protege este lugar.",
+    "options": [
+      {
+        "choice": "Beber da água do oásis",
+        "next": "drink_oasis_water"
+      },
+      {
+        "choice": "Explorar mais o oásis",
+        "next": "explore_more_oasis"
+      },
+      {
+        "choice": "Deixar o oásis e explorar o deserto",
+        "next": "explore_mystic_desert"
+      }
+    ]
+  },
+  "drink_oasis_water": {
+    "description": "Ao beber da água do oásis, você sente uma energia renovada percorrendo seu corpo. A água parece imbuída de propriedades mágicas, curando ferimentos e restaurando forças.",
+    "effects": {
+      "restore_health": {
+        "amount": 10
+      }
+    },
+    "options": [
+      {
+        "choice": "Explorar mais o oásis",
+        "next": "explore_more_oasis"
+      },
+      {
+        "choice": "Deixar o oásis e explorar o deserto",
+        "next": "explore_mystic_desert"
+      }
+    ]
+  },
+  "explore_more_oasis": {
+    "description": "Ao explorar mais o oásis, você encontra uma pequena gruta escondida atrás de uma cascata. Há inscrições antigas nas paredes da gruta que parecem contar a história de uma civilização perdida.",
+    "options": [
+      {
+        "choice": "Examinar as inscrições",
+        "next": "examine_oasis_inscriptions"
+      },
+      {
+        "choice": "Deixar o oásis e explorar o deserto",
+        "next": "explore_mystic_desert"
+      }
+    ]
+  },
+  "examine_oasis_inscriptions": {
+    "description": "As inscrições na gruta contam a história de um antigo reino que existiu no deserto. Elas falam de um templo subterrâneo onde os reis do passado se comunicavam com os deuses.",
+    "options": [
+      {
+        "choice": "Buscar o Templo Subterrâneo",
+        "next": "explore_subterranean_temple"
+      },
+      {
+        "choice": "Deixar o oásis e explorar o deserto",
+        "next": "explore_mystic_desert"
+      }
+    ]
+  },
+  "explore_subterranean_temple": {
+    "description": "O Templo Subterrâneo está escondido nas profundezas do deserto, acessível por uma abertura oculta nas dunas. Dentro, o ar é frio e o ambiente é iluminado por tochas antigas. Há uma presença mística no ar, como se os deuses antigos ainda estivessem por perto.",
+    "options": [
+      {
+        "choice": "Explorar a sala do trono",
+        "next": "explore_throne_room"
+      },
+      {
+        "choice": "Investigar a sala dos tesouros",
+        "next": "explore_treasure_room"
+      },
+      {
+        "choice": "Deixar o templo e explorar o deserto",
+        "next": "explore_mystic_desert"
+      }
+    ]
+  },
+  "explore_throne_room": {
+    "description": "A sala do trono do templo é imponente, com um grande trono esculpido em pedra no centro. Há uma inscrição acima do trono que parece ser um enigma.",
+    "options": [
+      {
+        "choice": "Tentar resolver o enigma",
+        "next": "solve_throne_riddle"
+      },
+      {
+        "choice": "Explorar mais o templo",
+        "next": "explore_subterranean_temple"
+      }
+    ]
+  },
+  "solve_throne_riddle": {
+    "description": "Ao resolver o enigma, uma passagem secreta se abre atrás do trono. A passagem leva a uma câmara escondida, onde uma relíquia sagrada está guardada.",
+    "effects": {
+      "add_item": {
+        "name": "Relíquia Sagrada",
+        "weight": 1,
+        "cost": 500
+      }
+    },
+    "options": [
+      {
+        "choice": "Explorar a sala dos tesouros",
+        "next": "explore_treasure_room"
+      },
+      {
+        "choice": "Deixar o templo e explorar o deserto",
+        "next": "explore_mystic_desert"
+      }
+    ]
+  },
+  "explore_treasure_room": {
+    "description": "A sala dos tesouros do templo é cheia de riquezas, mas também há armadilhas espalhadas pelo chão. No centro da sala, há um baú que parece estar intocado.",
+    "options": [
+      {
+        "choice": "Abrir o baú",
+        "next": "open_treasure_chest"
+      },
+      {
+        "choice": "Explorar mais o templo",
+        "next": "explore_subterranean_temple"
+      }
+    ]
+  },
+  "open_treasure_chest": {
+    "description": "Dentro do baú, você encontra uma joia antiga que brilha com uma luz própria. Há algo mágico e poderoso sobre ela.",
+    "effects": {
+      "add_item": {
+        "name": "Joia Antiga",
+        "weight": 0.5,
+        "cost": 300
+      }
+    },
+    "options": [
+      {
+        "choice": "Explorar mais o templo",
+        "next": "explore_subterranean_temple"
+      },
+      {
+        "choice": "Deixar o templo e explorar o deserto",
+        "next": "explore_mystic_desert"
+      }
+    ]
+  }
+}

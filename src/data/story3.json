@@ -1,0 +1,280 @@
+{
+  "explore_fortress": {
+    "description": "A Fortaleza Abandonada se ergue em meio às montanhas, suas torres parcialmente desmoronadas e os portões de ferro enferrujados. Antigamente, foi um bastião de defesa, mas agora está em ruínas. Você pode sentir uma presença sombria enquanto se aproxima.",
+    "options": [
+      {
+        "choice": "Explorar os corredores da fortaleza",
+        "next": "explore_fortress_corridors"
+      },
+      {
+        "choice": "Investigar a torre principal",
+        "next": "explore_fortress_tower"
+      },
+      {
+        "choice": "Voltar para as Montanhas da Perdição",
+        "next": "explore_doom_mountains"
+      }
+    ]
+  },
+  "explore_fortress_corridors": {
+    "description": "Os corredores da fortaleza são longos e escuros, com o som de gotas de água ecoando pelas paredes. Há marcas de batalhas passadas, e o chão está coberto de escombros. Você encontra uma passagem que parece levar a uma cripta antiga.",
+    "options": [
+      {
+        "choice": "Entrar na cripta",
+        "next": "explore_fortress_crypt"
+      },
+      {
+        "choice": "Explorar mais os corredores",
+        "next": "explore_fortress_more_corridors"
+      },
+      {
+        "choice": "Voltar para a entrada da fortaleza",
+        "next": "explore_fortress"
+      }
+    ]
+  },
+  "explore_fortress_crypt": {
+    "description": "A cripta da fortaleza é fria e úmida. Túmulos antigos alinham as paredes, e há um grande sarcófago no centro. Algo parece se mexer nas sombras, e você sente que não está sozinho.",
+    "options": [
+      {
+        "choice": "Abrir o sarcófago",
+        "next": "open_sarcophagus"
+      },
+      {
+        "choice": "Explorar os túmulos ao redor",
+        "next": "explore_graves"
+      },
+      {
+        "choice": "Sair da cripta",
+        "next": "explore_fortress_corridors"
+      }
+    ]
+  },
+  "explore_fortress_tower": {
+    "description": "A torre principal da fortaleza ainda se mantém firme. Ao subir as escadas em espiral, você percebe que o lugar foi usado recentemente. No topo, há uma sala de observação com uma vista ampla das montanhas e além. Há um mapa antigo sobre uma mesa.",
+    "options": [
+      {
+        "choice": "Estudar o mapa antigo",
+        "next": "study_old_map"
+      },
+      {
+        "choice": "Explorar mais a torre",
+        "next": "explore_more_tower"
+      },
+      {
+        "choice": "Descer da torre",
+        "next": "explore_fortress"
+      }
+    ]
+  },
+  "explore_fortress_more_corridors": {
+    "description": "Você continua explorando os corredores, e eventualmente encontra uma sala de armas. Antigas armaduras e espadas enferrujadas estão penduradas nas paredes, mas algumas delas ainda parecem utilizáveis.",
+    "options": [
+      {
+        "choice": "Investigar as armas",
+        "next": "investigate_fortress_armory"
+      },
+      {
+        "choice": "Explorar mais os corredores",
+        "next": "explore_fortress_corridors"
+      },
+      {
+        "choice": "Voltar para a entrada da fortaleza",
+        "next": "explore_fortress"
+      }
+    ]
+  },
+  "explore_fortress_crypt": {
+    "description": "A cripta da fortaleza é fria e úmida. Túmulos antigos alinham as paredes, e há um grande sarcófago no centro. Algo parece se mexer nas sombras, e você sente que não está sozinho.",
+    "options": [
+      {
+        "choice": "Abrir o sarcófago",
+        "next": "open_sarcophagus"
+      },
+      {
+        "choice": "Explorar os túmulos ao redor",
+        "next": "explore_graves"
+      },
+      {
+        "choice": "Sair da cripta",
+        "next": "explore_fortress_corridors"
+      }
+    ]
+  },
+  "explore_graves": {
+    "description": "Você examina os túmulos ao redor. Muitos deles parecem ser de antigos guerreiros, e alguns ainda têm suas armas e armaduras enterradas com eles. Em um dos túmulos, você encontra um medalhão brilhando com uma luz fraca.",
+    "options": [
+      {
+        "choice": "Pegar o medalhão",
+        "next": "take_medallion"
+      },
+      {
+        "choice": "Deixar o medalhão e continuar explorando",
+        "next": "explore_fortress_crypt"
+      },
+      {
+        "choice": "Sair da cripta",
+        "next": "explore_fortress_corridors"
+      }
+    ]
+  },
+  "explore_fortress_more_corridors": {
+    "description": "Você continua explorando os corredores, e eventualmente encontra uma sala de armas. Antigas armaduras e espadas enferrujadas estão penduradas nas paredes, mas algumas delas ainda parecem utilizáveis.",
+    "options": [
+      {
+        "choice": "Investigar as armas",
+        "next": "investigate_fortress_armory"
+      },
+      {
+        "choice": "Explorar mais os corredores",
+        "next": "explore_fortress_corridors"
+      },
+      {
+        "choice": "Voltar para a entrada da fortaleza",
+        "next": "explore_fortress"
+      }
+    ]
+  },
+  "study_old_map": {
+    "description": "O mapa antigo mostra as terras ao redor da fortaleza, com marcações de locais que não existem mais nos mapas modernos. Um desses locais está destacado: um vale escondido na Floresta Negra.",
+    "options": [
+      {
+        "choice": "Guardar o mapa para futuras explorações",
+        "effects": {
+          "add_item": {
+            "name": "Mapa Antigo",
+            "weight": 0.1,
+            "cost": 0
+          }
+        },
+        "next": "explore_fortress_tower"
+      },
+      {
+        "choice": "Explorar mais a torre",
+        "next": "explore_more_tower"
+      },
+      {
+        "choice": "Descer da torre",
+        "next": "explore_fortress"
+      }
+    ]
+  },
+
+  "explore_more_tower": {
+    "description": "Ao continuar explorando a torre, você encontra um livro antigo em uma prateleira empoeirada. Parece ser um diário de um antigo comandante da fortaleza.",
+    "options": [
+      {
+        "choice": "Ler o diário",
+        "next": "read_commander_journal"
+      },
+      {
+        "choice": "Voltar para a entrada da torre",
+        "next": "explore_fortress_tower"
+      }
+    ]
+  },
+  "read_commander_journal": {
+    "description": "O diário do comandante revela os últimos dias da fortaleza, detalhando uma batalha desesperada contra forças desconhecidas. Há também menções a um 'Vale da Perdição' que os guerreiros tentaram alcançar antes da derrota final.",
+    "options": [
+      {
+        "choice": "Guardar o diário",
+        "effects": {
+          "add_item": {
+            "name": "Diário do Comandante",
+            "weight": 0.5,
+            "cost": 0
+          }
+        },
+        "next": "explore_fortress_tower"
+      },
+      {
+        "choice": "Deixar o diário e continuar explorando",
+        "next": "explore_more_tower"
+      }
+    ]
+  },
+  "explore_valley": {
+    "description": "O Vale Misterioso é um lugar de beleza sombria e estranha. As plantas crescem de maneira incomum, e o tempo parece se mover de forma diferente aqui. À medida que você avança, encontra uma caverna que emite uma luz suave.",
+    "options": [
+      {
+        "choice": "Explorar a caverna brilhante",
+        "next": "explore_glowing_cave"
+      },
+      {
+        "choice": "Explorar mais o vale",
+        "next": "explore_more_valley"
+      },
+      {
+        "choice": "Voltar para a Floresta Negra",
+        "next": "explore_black_forest"
+      }
+    ]
+  },
+  "explore_glowing_cave": {
+    "description": "Dentro da caverna, você encontra cristais que brilham com uma luz suave e mágica. O ambiente é tranquilo, mas você sente que esses cristais têm um poder oculto.",
+    "options": [
+      {
+        "choice": "Coletar alguns cristais",
+        "effects": {
+          "add_item": {
+            "name": "Cristal Brilhante",
+            "weight": 0.3,
+            "cost": 50
+          }
+        },
+        "next": "explore_valley"
+      },
+      {
+        "choice": "Explorar mais a caverna",
+        "next": "explore_deeper_glowing_cave"
+      },
+      {
+        "choice": "Sair da caverna",
+        "next": "explore_valley"
+      }
+    ]
+  },
+  "explore_deeper_glowing_cave": {
+    "description": "Mais adiante na caverna, você encontra um altar coberto de runas. A luz dos cristais parece convergir para este ponto, e o ar está carregado de energia mágica.",
+    "options": [
+      {
+        "choice": "Tentar ativar o altar",
+        "next": "activate_valley_altar"
+      },
+      {
+        "choice": "Recuar e sair da caverna",
+        "next": "explore_glowing_cave"
+      },
+      {
+        "choice": "Explorar mais a caverna",
+        "next": "explore_more_glowing_cave"
+      }
+    ]
+  },
+  "activate_valley_altar": {
+    "description": "Ao ativar o altar, uma explosão de energia preenche a caverna. Visões de antigos rituais e sacrifícios inundam sua mente, e você sente que algo foi despertado no vale.",
+    "options": [
+      {
+        "choice": "Investigar as mudanças no vale",
+        "next": "explore_more_valley"
+      },
+      {
+        "choice": "Sair da caverna rapidamente",
+        "next": "explore_valley"
+      }
+    ]
+  },
+  "explore_more_valley": {
+    "description": "O vale parece diferente após a ativação do altar. As plantas brilham levemente, e há uma sensação de que algo antigo e poderoso agora desperta por aqui.",
+    "options": [
+      {
+        "choice": "Explorar uma trilha que leva a um lago",
+        "next": "explore_valley_lake"
+      },
+      {
+        "choice": "Voltar para a Floresta Negra",
+        "next": "explore_black_forest"
+      }
+    ]
+  }
+}

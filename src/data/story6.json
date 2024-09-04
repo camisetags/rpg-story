@@ -1,0 +1,48 @@
+{
+  "explore_subterranean_temple": {
+    "description": "O Templo Subterrâneo está escondido nas profundezas do deserto, acessível por uma abertura oculta nas dunas. Dentro, o ar é frio e o ambiente é iluminado por tochas antigas. Há uma presença mística no ar, como se os deuses antigos ainda estivessem por perto.",
+    "options": [
+      {
+        "choice": "Explorar a sala do trono",
+        "next": "explore_throne_room"
+      },
+      {
+        "choice": "Investigar a sala dos tesouros",
+        "next": "explore_treasure_room"
+      },
+      {
+        "choice": "Explorar as Catacumbas Antigas",
+        "next": "explore_ancient_catacombs"
+      },
+      {
+        "choice": "Buscar o caminho para a Cidade Submersa",
+        "next": "explore_submerged_city"
+      },
+      {
+        "choice": "Deixar o templo e explorar o deserto",
+        "next": "explore_mystic_desert"
+      }
+    ]
+  },
+  "explore_enchanted_oasis": {
+    "description": "O Oásis Encantado é uma visão surreal em meio ao deserto. As águas cristalinas refletem o céu e as palmeiras ao redor. Há uma sensação de tranquilidade, mas também de que algo mágico protege este lugar.",
+    "options": [
+      {
+        "choice": "Beber da água do oásis",
+        "next": "drink_oasis_water"
+      },
+      {
+        "choice": "Explorar mais o oásis",
+        "next": "explore_more_oasis"
+      },
+      {
+        "choice": "Descobrir a entrada para a Cidade Submersa",
+        "next": "discover_submerged_city_entrance"
+      },
+      {
+        "choice": "Deixar o oásis e explorar o deserto",
+        "next": "explore_mystic_desert"
+      }
+    ]
+  }
+}

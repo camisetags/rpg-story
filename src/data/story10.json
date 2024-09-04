@@ -1,0 +1,85 @@
+{
+  "explore_shadow_forest_entrance": {
+    "description": "Você encontra a entrada para a Floresta das Sombras. As árvores aqui são ainda mais altas e densas do que na Floresta Negra. A atmosfera é pesada, como se a própria floresta estivesse viva, observando seus passos.",
+    "options": [
+      {
+        "choice": "Entrar na Floresta das Sombras",
+        "next": "explore_shadow_forest"
+      },
+      {
+        "choice": "Seguir o caminho para as Montanhas Gélidas",
+        "next": "explore_frozen_mountains"
+      },
+      {
+        "choice": "Voltar para o Deserto Místico",
+        "next": "explore_mystic_desert"
+      },
+      {
+        "choice": "Voltar para o Templo Subterrâneo",
+        "next": "explore_subterranean_temple"
+      },
+      {
+        "choice": "Voltar para a Floresta Negra",
+        "next": "explore_black_forest"
+      }
+    ]
+  },
+  "explore_subterranean_temple": {
+    "description": "O Templo Subterrâneo está escondido nas profundezas do deserto, acessível por uma abertura oculta nas dunas. Dentro, o ar é frio e o ambiente é iluminado por tochas antigas. Há uma presença mística no ar, como se os deuses antigos ainda estivessem por perto.",
+    "options": [
+      {
+        "choice": "Explorar a sala do trono",
+        "next": "explore_throne_room"
+      },
+      {
+        "choice": "Investigar a sala dos tesouros",
+        "next": "explore_treasure_room"
+      },
+      {
+        "choice": "Explorar as Catacumbas Antigas",
+        "next": "explore_ancient_catacombs"
+      },
+      {
+        "choice": "Buscar o caminho para a Cidade Submersa",
+        "next": "explore_submerged_city"
+      },
+      {
+        "choice": "Buscar a entrada para a Floresta das Sombras",
+        "next": "explore_shadow_forest_entrance"
+      },
+      {
+        "choice": "Seguir para as Montanhas Gélidas",
+        "next": "explore_frozen_mountains"
+      },
+      {
+        "choice": "Deixar o templo e explorar o deserto",
+        "next": "explore_mystic_desert"
+      }
+    ]
+  },
+  "explore_submerged_city": {
+    "description": "A Cidade Submersa é uma visão de outro mundo, com ruas e edifícios preservados pela água. As correntes subaquáticas criam um movimento constante, como se a cidade ainda estivesse viva. No centro, há um grande templo submerso que parece ser o ponto focal deste lugar.",
+    "options": [
+      {
+        "choice": "Explorar o templo submerso",
+        "next": "explore_submerged_temple"
+      },
+      {
+        "choice": "Explorar as ruínas da cidade",
+        "next": "explore_submerged_ruins"
+      },
+      {
+        "choice": "Buscar uma saída para o Templo Subterrâneo",
+        "next": "exit_to_subterranean_temple"
+      },
+      {
+        "choice": "Seguir para as Montanhas Gélidas",
+        "next": "explore_frozen_mountains"
+      },
+      {
+        "choice": "Voltar para o Oásis Encantado",
+        "next": "explore_enchanted_oasis"
+      }
+    ]
+  }
+}

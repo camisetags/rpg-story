@@ -1,0 +1,783 @@
+{
+  "explore_village": {
+    "description": "A vila de Arundell é pequena, mas cheia de história. As casas de pedra e madeira são simples, mas resistentes, e os moradores, apesar da tensão no ar, ainda mantêm suas rotinas. Você pode ouvir o som de marteladas vindas da forja de Gorak, o ferreiro. Mais adiante, a taverna de Garrett está animada, apesar dos sussurros preocupados. E na extremidade da vila, o mercador Lorik, um homem misterioso, parece esperar por algo ou alguém em sua loja cheia de relíquias.",
+    "options": [
+      {
+        "choice": "Visitar a forja de Gorak",
+        "next": "visit_blacksmith"
+      },
+      {
+        "choice": "Ir até a taverna de Garrett",
+        "next": "visit_tavern"
+      },
+      {
+        "choice": "Explorar a loja do mercador Lorik",
+        "next": "visit_merchant"
+      },
+      {
+        "choice": "Conversar com os aldeões na praça central",
+        "next": "talk_villagers"
+      },
+      {
+        "choice": "Visitar a casa do sábio local, Elowen",
+        "next": "visit_sage"
+      },
+      {
+        "choice": "Explorar os arredores da vila",
+        "next": "explore_outskirts"
+      }
+    ]
+  },
+  "visit_blacksmith": {
+    "description": "Você se dirige à forja de Gorak. O calor das chamas é quase palpável, e o som constante do martelo ressoando na bigorna preenche o ar. Gorak, um homem de poucas palavras, olha para você com um brilho nos olhos, como se soubesse que sua visita tem um propósito maior.",
+    "options": [
+      {
+        "choice": "Perguntar sobre as armas disponíveis",
+        "next": "ask_weapons"
+      },
+      {
+        "choice": "Conversar com Gorak sobre os rumores na vila",
+        "next": "talk_rumors"
+      },
+      {
+        "choice": "Pedir para aprender a forjar uma arma",
+        "next": "learn_forging"
+      },
+      {
+        "choice": "Sair da forja e explorar outro lugar",
+        "next": "explore_village"
+      }
+    ]
+  },
+  "ask_weapons": {
+    "description": "Gorak para seu trabalho e apresenta algumas de suas melhores criações: uma espada longa, uma adaga leve e um escudo robusto. Cada uma dessas armas foi feita com precisão e cuidado, projetada para diferentes estilos de combate.",
+    "options": [
+      {
+        "choice": "Comprar a espada longa (Custo: 300 moedas, Peso: 3kg)",
+        "effects": {
+          "add_item": {
+            "name": "Espada Longa",
+            "weight": 3,
+            "cost": 300
+          }
+        },
+        "next": "explore_village"
+      },
+      {
+        "choice": "Comprar a adaga leve (Custo: 150 moedas, Peso: 1kg)",
+        "effects": {
+          "add_item": {
+            "name": "Adaga Leve",
+            "weight": 1,
+            "cost": 150
+          }
+        },
+        "next": "explore_village"
+      },
+      {
+        "choice": "Comprar o escudo robusto (Custo: 200 moedas, Peso: 4kg)",
+        "effects": {
+          "add_item": {
+            "name": "Escudo Robusto",
+            "weight": 4,
+            "cost": 200
+          }
+        },
+        "next": "explore_village"
+      },
+      {
+        "choice": "Não comprar nada e sair da forja",
+        "next": "explore_village"
+      }
+    ]
+  },
+  "talk_rumors": {
+    "description": "Você pergunta a Gorak sobre os rumores que correm pela vila. Ele para por um momento, enxuga o suor da testa e responde com uma voz grave: 'Ouvi dizer que algo antigo está despertando nas montanhas. Antigas lendas falam de uma força que foi selada há muito tempo, mas os selos estão enfraquecendo. É por isso que estou reforçando as armas. Pode ser que precisemos delas em breve.'",
+    "options": [
+      {
+        "choice": "Pedir mais detalhes sobre a força antiga",
+        "next": "ask_ancient_force"
+      },
+      {
+        "choice": "Agradecer e sair da forja",
+        "next": "explore_village"
+      }
+    ]
+  },
+  "learn_forging": {
+    "description": "Você expressa interesse em aprender a forjar uma arma. Gorak sorri pela primeira vez em muito tempo e diz: 'É uma habilidade que demanda paciência e força. Mas se você estiver disposto a aprender, posso ensinar o básico.'",
+    "options": [
+      {
+        "choice": "Começar o treinamento na forja",
+        "effects": {
+          "gain_skill": {
+            "name": "Forja Básica",
+            "level": 1
+          }
+        },
+        "next": "training_forging"
+      },
+      {
+        "choice": "Agradecer e sair da forja",
+        "next": "explore_village"
+      }
+    ]
+  },
+  "training_forging": {
+    "description": "Gorak começa a ensinar o básico da forja. Você aprende a segurar o martelo corretamente, a aquecer o metal até o ponto exato e a moldar o aço em uma lâmina. Após várias horas de treinamento intenso, você sente que aprendeu algo valioso.",
+    "options": [
+      {
+        "choice": "Continuar treinando para melhorar suas habilidades",
+        "effects": {
+          "improve_skill": {
+            "name": "Forja Básica",
+            "level": 2
+          }
+        },
+        "next": "continue_forging"
+      },
+      {
+        "choice": "Parar o treinamento e explorar outro lugar",
+        "next": "explore_village"
+      }
+    ]
+  },
+  "ask_ancient_force": {
+    "description": "Gorak olha para os lados, como se temesse que alguém pudesse ouvi-lo, e então sussurra: 'Dizem que nas profundezas das montanhas está selada uma entidade de poder incomensurável, algo que foi banido pelos antigos. Se isso for verdade, estamos diante de algo que nenhum de nós pode enfrentar sozinho.'",
+    "options": [
+      {
+        "choice": "Explorar mais sobre essa força em outro lugar",
+        "next": "explore_village"
+      },
+      {
+        "choice": "Sair da forja e investigar mais na taverna",
+        "next": "visit_tavern"
+      }
+    ]
+  },
+  "visit_tavern": {
+    "description": "Você entra na taverna de Garrett, um lugar onde os aldeões costumam se reunir para beber e conversar. O ambiente hoje, no entanto, está pesado. Os sussurros são baixos, e todos parecem nervosos. Garrett, o taverneiro, limpa um copo atrás do balcão, mas seus olhos se movem inquietos pelo salão.",
+    "options": [
+      {
+        "choice": "Perguntar a Garrett sobre os rumores",
+        "next": "ask_garrett_rumors"
+      },
+      {
+        "choice": "Ouvir as conversas dos aldeões",
+        "next": "listen_villagers"
+      },
+      {
+        "choice": "Pedir uma bebida e relaxar",
+        "next": "order_drink"
+      },
+      {
+        "choice": "Sair da taverna e explorar outro lugar",
+        "next": "explore_village"
+      }
+    ]
+  },
+  "ask_garrett_rumors": {
+    "description": "Garrett olha para você com uma expressão séria. 'Tem algo nas montanhas, algo que nossos antepassados selaram há muito tempo. As histórias são antigas, mas sempre há um fundo de verdade. Acho que estamos todos em perigo se aquilo acordar.'",
+    "options": [
+      {
+        "choice": "Pedir mais detalhes sobre o que está nas montanhas",
+        "next": "ask_more_details"
+      },
+      {
+        "choice": "Agradecer e sair da taverna",
+        "next": "explore_village"
+      }
+    ]
+  },
+  "listen_villagers": {
+    "description": "Você decide ouvir as conversas ao redor. Os aldeões falam em voz baixa sobre estranhas luzes vistas nas montanhas e sons que ecoam à noite. Há também rumores de desaparecimentos nas vilas vizinhas.",
+    "options": [
+      {
+        "choice": "Interromper e perguntar mais sobre os desaparecimentos",
+        "next": "ask_disappearances"
+      },
+      {
+        "choice": "Continuar ouvindo",
+        "next": "keep_listening"
+      },
+      {
+        "choice": "Sair da taverna e explorar outro lugar",
+        "next": "explore_village"
+      }
+    ]
+  },
+  "order_drink": {
+    "description": "Você pede uma bebida a Garrett, que serve uma caneca de hidromel. O sabor é doce, mas o ambiente tenso impede que você relaxe totalmente.",
+    "options": [
+      {
+        "choice": "Ouvir as conversas ao redor",
+        "next": "listen_villagers"
+      },
+      {
+        "choice": "Conversar com Garrett sobre os rumores",
+        "next": "ask_garrett_rumors"
+      },
+      {
+        "choice": "Sair da taverna e explorar outro lugar",
+        "next": "explore_village"
+      }
+    ]
+  },
+  "ask_more_details": {
+    "description": "Garrett baixa ainda mais a voz. 'Os antigos selaram algo nas montanhas, uma entidade ou um poder que não deveria ser liberado. Não sei muito mais que isso, mas sei que os anciões da vila talvez saibam.'",
+    "options": [
+      {
+        "choice": "Sair da taverna e visitar o sábio Elowen",
+        "next": "visit_sage"
+      },
+      {
+        "choice": "Explorar mais a vila em busca de informações",
+        "next": "explore_village"
+      }
+    ]
+  },
+  "ask_disappearances": {
+    "description": "Você interrompe a conversa dos aldeões e pergunta sobre os desaparecimentos. Um deles, com uma expressão assustada, responde: 'Pessoas têm sumido nas vilas vizinhas, sempre à noite. Eles saem para trabalhar e nunca mais voltam.'",
+    "options": [
+      {
+        "choice": "Perguntar sobre alguma conexão com as montanhas",
+        "next": "ask_mountains_connection"
+      },
+      {
+        "choice": "Agradecer e sair da taverna",
+        "next": "explore_village"
+      }
+    ]
+  },
+  "keep_listening": {
+    "description": "Você continua ouvindo, mas as conversas não revelam muito mais. Os aldeões estão claramente amedrontados, mas ninguém parece saber exatamente o que está acontecendo.",
+    "options": [
+      {
+        "choice": "Perguntar sobre os desaparecimentos",
+        "next": "ask_disappearances"
+      },
+      {
+        "choice": "Sair da taverna e explorar outro lugar",
+        "next": "explore_village"
+      }
+    ]
+  },
+  "ask_mountains_connection": {
+    "description": "O aldeão hesita, mas depois responde: 'Há quem diga que os desaparecimentos têm algo a ver com as montanhas. Talvez seja o que está lá que os está chamando.'",
+    "options": [
+      {
+        "choice": "Explorar mais sobre a conexão com as montanhas",
+        "next": "explore_village"
+      },
+      {
+        "choice": "Sair da taverna e visitar o sábio Elowen",
+        "next": "visit_sage"
+      }
+    ]
+  },
+  "visit_merchant": {
+    "description": "Você entra na loja de Lorik, o mercador. O local é pequeno, mas cheio de itens intrigantes. Lorik, um homem de poucas palavras, sorri ao ver você. 'Procurando algo especial? Talvez algo que possa protegê-lo dos perigos que estão por vir?'",
+    "options": [
+      {
+        "choice": "Perguntar sobre as relíquias",
+        "next": "ask_relics"
+      },
+      {
+        "choice": "Comprar um amuleto de proteção (Custo: 100 moedas, Peso: 0.5kg)",
+        "effects": {
+          "add_item": {
+            "name": "Amuleto de Proteção",
+            "weight": 0.5,
+            "cost": 100
+          }
+        },
+        "next": "explore_village"
+      },
+      {
+        "choice": "Sair da loja e explorar outro lugar",
+        "next": "explore_village"
+      }
+    ]
+  },
+  "ask_relics": {
+    "description": "Lorik mostra alguns dos itens que ele tem à venda. 'Este amuleto', diz ele, 'afasta espíritos malignos. Este pergaminho contém um feitiço antigo. E este anel, dizem, concede força ao portador.'",
+    "options": [
+      {
+        "choice": "Comprar o amuleto de proteção (Custo: 100 moedas, Peso: 0.5kg)",
+        "effects": {
+          "add_item": {
+            "name": "Amuleto de Proteção",
+            "weight": 0.5,
+            "cost": 100
+          }
+        },
+        "next": "explore_village"
+      },
+      {
+        "choice": "Comprar o pergaminho antigo (Custo: 200 moedas, Peso: 0.2kg)",
+        "effects": {
+          "add_item": {
+            "name": "Pergaminho Antigo",
+            "weight": 0.2,
+            "cost": 200
+          }
+        },
+        "next": "explore_village"
+      },
+      {
+        "choice": "Comprar o anel de força (Custo: 150 moedas, Peso: 0.1kg)",
+        "effects": {
+          "add_item": {
+            "name": "Anel de Força",
+            "weight": 0.1,
+            "cost": 150
+          }
+        },
+        "next": "explore_village"
+      },
+      {
+        "choice": "Não comprar nada e sair da loja",
+        "next": "explore_village"
+      }
+    ]
+  },
+  "visit_sage": {
+    "description": "Você decide visitar a casa do sábio Elowen, um homem conhecido por seu vasto conhecimento sobre a história e os segredos da região. A casa dele é simples, mas cheia de livros e pergaminhos antigos.",
+    "options": [
+      {
+        "choice": "Perguntar sobre a força nas montanhas",
+        "next": "ask_sage_mountains"
+      },
+      {
+        "choice": "Pedir orientação sobre o que fazer",
+        "next": "ask_sage_advice"
+      },
+      {
+        "choice": "Sair da casa e explorar outro lugar",
+        "next": "explore_village"
+      }
+    ]
+  },
+  "ask_sage_mountains": {
+    "description": "Elowen olha para você com olhos sérios. 'As montanhas guardam muitos segredos, mas o mais perigoso é uma força que os antigos selaram há séculos. Se ela realmente está despertando, precisamos nos preparar.'",
+    "options": [
+      {
+        "choice": "Pedir mais detalhes sobre essa força",
+        "next": "ask_sage_details"
+      },
+      {
+        "choice": "Agradecer e sair da casa",
+        "next": "explore_village"
+      }
+    ]
+  },
+  "ask_sage_details": {
+    "description": "Elowen continua: 'Essa força é mencionada em antigos textos como algo que não pertence ao nosso mundo. Foi necessário o poder combinado de várias tribos antigas para selá-la. Se esse selo enfraqueceu, precisaremos de algo igualmente poderoso para contê-la novamente.'",
+    "options": [
+      {
+        "choice": "Explorar mais sobre o que pode ser feito",
+        "next": "ask_sage_advice"
+      },
+      {
+        "choice": "Sair da casa e explorar outro lugar",
+        "next": "explore_village"
+      }
+    ]
+  },
+  "ask_sage_advice": {
+    "description": "Elowen pensa por um momento antes de responder: 'Precisamos de aliados, conhecimento e poder para enfrentar o que está por vir. Converse com o ferreiro, o mercador e os guerreiros. Cada um deles pode ter algo que nos ajude.'",
+    "options": [
+      {
+        "choice": "Visitar a forja de Gorak",
+        "next": "visit_blacksmith"
+      },
+      {
+        "choice": "Visitar a loja do mercador Lorik",
+        "next": "visit_merchant"
+      },
+      {
+        "choice": "Ir até a taverna de Garrett",
+        "next": "visit_tavern"
+      }
+    ]
+  },
+  "talk_villagers": {
+    "description": "Você decide conversar com os aldeões na praça central. Eles estão visivelmente preocupados e falam sobre os estranhos acontecimentos recentes, como luzes nas montanhas e ruídos à noite.",
+    "options": [
+      {
+        "choice": "Perguntar sobre as luzes nas montanhas",
+        "next": "ask_lights_mountains"
+      },
+      {
+        "choice": "Perguntar sobre os ruídos à noite",
+        "next": "ask_noises_night"
+      },
+      {
+        "choice": "Sair da praça e explorar outro lugar",
+        "next": "explore_village"
+      }
+    ]
+  },
+  "ask_lights_mountains": {
+    "description": "Os aldeões falam sobre luzes estranhas que foram vistas nas montanhas nas últimas noites. 'Alguns dizem que são os espíritos dos antigos, outros acreditam que é algo mais sinistro,' diz um dos aldeões.",
+    "options": [
+      {
+        "choice": "Explorar mais sobre as luzes nas montanhas",
+        "next": "explore_village"
+      },
+      {
+        "choice": "Sair da praça e visitar o sábio Elowen",
+        "next": "visit_sage"
+      }
+    ]
+  },
+  "ask_noises_night": {
+    "description": "Os aldeões descrevem sons misteriosos que ecoam à noite, como se algo estivesse se movendo nas sombras. 'Nunca ouvi nada assim antes,' diz um deles. 'É como um sussurro, mas vindo de todas as direções.'",
+    "options": [
+      {
+        "choice": "Investigar mais sobre os sons",
+        "next": "explore_village"
+      },
+      {
+        "choice": "Sair da praça e visitar o sábio Elowen",
+        "next": "visit_sage"
+      }
+    ]
+  },
+  "explore_outskirts": {
+    "description": "Você decide explorar os arredores da vila. As opções são vastas: a Floresta Negra ao norte, as Montanhas da Perdição a leste, e as Ruínas Antigas a oeste, todas cheias de mistérios e perigos.",
+    "options": [
+      {
+        "choice": "Ir para a Floresta Negra",
+        "next": "explore_black_forest"
+      },
+      {
+        "choice": "Ir para as Montanhas da Perdição",
+        "next": "explore_doom_mountains"
+      },
+      {
+        "choice": "Explorar as Ruínas Antigas",
+        "next": "explore_ancient_ruins"
+      },
+      {
+        "choice": "Voltar para a vila",
+        "next": "explore_village"
+      }
+    ]
+  },
+  "explore_black_forest": {
+    "description": "A Floresta Negra é densa e misteriosa. As árvores antigas bloqueiam a luz do sol, e há uma sensação constante de que você está sendo observado. Mais adiante, você vê uma trilha que parece levar a um Templo Esquecido.",
+    "options": [
+      {
+        "choice": "Seguir a trilha até o Templo Esquecido",
+        "next": "explore_forgotten_temple"
+      },
+      {
+        "choice": "Explorar as profundezas da floresta",
+        "next": "explore_forest_depths"
+      },
+      {
+        "choice": "Voltar para os arredores da vila",
+        "next": "explore_outskirts"
+      }
+    ]
+  },
+  "explore_forgotten_temple": {
+    "description": "Você segue a trilha até o Templo Esquecido, um antigo local de culto agora abandonado. As paredes estão cobertas de musgo e inscrições antigas. Há uma entrada que parece levar para uma câmara subterrânea.",
+    "options": [
+      {
+        "choice": "Entrar na câmara subterrânea",
+        "next": "explore_underground_chamber"
+      },
+      {
+        "choice": "Examinar as inscrições nas paredes",
+        "next": "examine_wall_inscriptions"
+      },
+      {
+        "choice": "Voltar para a Floresta Negra",
+        "next": "explore_black_forest"
+      }
+    ]
+  },
+  "explore_underground_chamber": {
+    "description": "A câmara subterrânea é vasta e escura. No centro, há um altar antigo que parece pulsar com uma energia estranha. Há também várias passagens que se estendem em diferentes direções, sugerindo uma vasta rede de túneis.",
+    "options": [
+      {
+        "choice": "Explorar os túneis",
+        "next": "explore_tunnels"
+      },
+      {
+        "choice": "Investigar o altar",
+        "next": "investigate_altar"
+      },
+      {
+        "choice": "Voltar para o Templo Esquecido",
+        "next": "explore_forgotten_temple"
+      }
+    ]
+  },
+  "explore_tunnels": {
+    "description": "Os túneis são estreitos e sinuosos, com paredes cobertas de símbolos antigos. À medida que você avança, começa a ouvir sons distantes, como se algo estivesse se movendo nas profundezas. Um desses túneis parece levar a uma Cidade Perdida.",
+    "options": [
+      {
+        "choice": "Seguir o túnel até a Cidade Perdida",
+        "next": "explore_lost_city"
+      },
+      {
+        "choice": "Explorar outros túneis",
+        "next": "explore_more_tunnels"
+      },
+      {
+        "choice": "Voltar para a câmara subterrânea",
+        "next": "explore_underground_chamber"
+      }
+    ]
+  },
+  "investigate_altar": {
+    "description": "O altar no centro da câmara parece irradiar uma energia poderosa. Ao se aproximar, você sente uma presença antiga, como se o altar estivesse aguardando por alguém para despertar seu verdadeiro poder.",
+    "options": [
+      {
+        "choice": "Tentar ativar o altar",
+        "next": "activate_altar"
+      },
+      {
+        "choice": "Recuar e explorar outro lugar",
+        "next": "explore_underground_chamber"
+      },
+      {
+        "choice": "Voltar para o Templo Esquecido",
+        "next": "explore_forgotten_temple"
+      }
+    ]
+  },
+  "activate_altar": {
+    "description": "Ao tentar ativar o altar, uma onda de energia é liberada, e visões de uma antiga civilização enchem sua mente. Você sente que algo foi despertado, algo que pode ser tanto um aliado quanto uma ameaça.",
+    "options": [
+      {
+        "choice": "Investigar as novas passagens que se abriram",
+        "next": "explore_new_passages"
+      },
+      {
+        "choice": "Sair da câmara antes que seja tarde demais",
+        "next": "explore_underground_chamber"
+      },
+      {
+        "choice": "Voltar para o Templo Esquecido",
+        "next": "explore_forgotten_temple"
+      }
+    ]
+  },
+  "explore_lost_city": {
+    "description": "A Cidade Perdida se revela como um vasto complexo subterrâneo, com templos, praças e ruínas antigas. O ambiente é misterioso e você sente que segredos há muito esquecidos estão enterrados aqui.",
+    "options": [
+      {
+        "choice": "Explorar o Templo da Cidade Perdida",
+        "next": "explore_lost_city_temple"
+      },
+      {
+        "choice": "Visitar a Praça Central",
+        "next": "explore_lost_city_square"
+      },
+      {
+        "choice": "Explorar mais a Cidade Perdida",
+        "next": "explore_more_lost_city"
+      },
+      {
+        "choice": "Voltar para os túneis",
+        "next": "explore_tunnels"
+      }
+    ]
+  },
+  "explore_lost_city_temple": {
+    "description": "O Templo na Cidade Perdida é uma construção imponente, com colunas esculpidas e grandes portas de pedra. No interior, há altares e estátuas de deuses antigos, além de inscrições que falam de rituais esquecidos.",
+    "options": [
+      {
+        "choice": "Estudar as inscrições no templo",
+        "next": "study_temple_inscriptions"
+      },
+      {
+        "choice": "Investigar os altares antigos",
+        "next": "investigate_temple_altars"
+      },
+      {
+        "choice": "Voltar para a Cidade Perdida",
+        "next": "explore_lost_city"
+      }
+    ]
+  },
+  "explore_lost_city_square": {
+    "description": "A Praça Central da Cidade Perdida é um grande espaço aberto, cercado por ruínas de prédios antigos. No centro, há uma estátua de um guerreiro, e ao redor, pequenas lojas e casas abandonadas.",
+    "options": [
+      {
+        "choice": "Examinar a estátua do guerreiro",
+        "next": "examine_warrior_statue"
+      },
+      {
+        "choice": "Explorar as lojas abandonadas",
+        "next": "explore_abandoned_shops"
+      },
+      {
+        "choice": "Voltar para a Cidade Perdida",
+        "next": "explore_lost_city"
+      }
+    ]
+  },
+  "explore_more_tunnels": {
+    "description": "Ao explorar mais os túneis, você encontra um antigo depósito de armas e suprimentos. É evidente que esta área foi usada por um exército em tempos passados.",
+    "options": [
+      {
+        "choice": "Investigar o depósito de armas",
+        "next": "investigate_weapon_storage"
+      },
+      {
+        "choice": "Voltar para a câmara subterrânea",
+        "next": "explore_underground_chamber"
+      }
+    ]
+  },
+  "explore_more_lost_city": {
+    "description": "Explorando mais a Cidade Perdida, você encontra um antigo mercado e uma praça onde os moradores de antigamente realizavam rituais. Há sinais de que esta civilização tinha acesso a um poder místico.",
+    "options": [
+      {
+        "choice": "Investigar o mercado antigo",
+        "next": "investigate_ancient_market"
+      },
+      {
+        "choice": "Explorar a praça de rituais",
+        "next": "explore_ritual_square"
+      },
+      {
+        "choice": "Voltar para a Cidade Perdida",
+        "next": "explore_lost_city"
+      }
+    ]
+  },
+  "explore_doom_mountains": {
+    "description": "As Montanhas da Perdição são um local inóspito, conhecido por seus penhascos íngremes e tempestades repentinas. No entanto, há rumores de que uma antiga força está escondida aqui, protegida por perigos desconhecidos.",
+    "options": [
+      {
+        "choice": "Subir até o topo da montanha",
+        "next": "climb_mountain_peak"
+      },
+      {
+        "choice": "Explorar uma caverna próxima",
+        "next": "explore_nearby_cave"
+      },
+      {
+        "choice": "Voltar para os arredores da vila",
+        "next": "explore_outskirts"
+      }
+    ]
+  },
+  "climb_mountain_peak": {
+    "description": "A subida até o topo da montanha é árdua, mas a vista que se revela é espetacular. No entanto, há uma estranha sensação no ar, como se algo antigo estivesse observando seus movimentos.",
+    "options": [
+      {
+        "choice": "Explorar o topo da montanha",
+        "next": "explore_mountain_top"
+      },
+      {
+        "choice": "Descer a montanha",
+        "next": "explore_doom_mountains"
+      }
+    ]
+  },
+  "explore_nearby_cave": {
+    "description": "A caverna próxima à montanha é escura e profunda. Sons estranhos ecoam pelas paredes, e você tem a sensação de que há algo mais lá dentro, algo que não quer ser encontrado.",
+    "options": [
+      {
+        "choice": "Entrar mais fundo na caverna",
+        "next": "explore_cave_depths"
+      },
+      {
+        "choice": "Sair da caverna",
+        "next": "explore_doom_mountains"
+      }
+    ]
+  },
+  "explore_cave_depths": {
+    "description": "Quanto mais fundo você vai na caverna, mais opressiva a atmosfera se torna. Finalmente, você chega a uma câmara oculta onde uma criatura adormecida parece proteger algo.",
+    "options": [
+      {
+        "choice": "Enfrentar a criatura",
+        "next": "fight_cave_creature"
+      },
+      {
+        "choice": "Tentar roubar o que ela protege",
+        "next": "steal_cave_treasure"
+      },
+      {
+        "choice": "Sair da caverna e voltar para a montanha",
+        "next": "explore_doom_mountains"
+      }
+    ]
+  },
+  "explore_mountain_top": {
+    "description": "No topo da montanha, você encontra um antigo santuário. Há inscrições nas pedras que falam de um ritual para selar algo poderoso, mas os detalhes estão desgastados pelo tempo.",
+    "options": [
+      {
+        "choice": "Estudar as inscrições do santuário",
+        "next": "study_sanctuary_inscriptions"
+      },
+      {
+        "choice": "Explorar mais o topo da montanha",
+        "next": "explore_more_mountain_top"
+      },
+      {
+        "choice": "Descer a montanha",
+        "next": "explore_doom_mountains"
+      }
+    ]
+  },
+  "explore_ancient_ruins": {
+    "description": "As Ruínas Antigas ao oeste da vila são um lembrete de um passado há muito esquecido. As construções estão em ruínas, mas há algo sobre o lugar que ainda emana poder.",
+    "options": [
+      {
+        "choice": "Explorar o templo nas ruínas",
+        "next": "explore_ruins_temple"
+      },
+      {
+        "choice": "Investigar as construções destruídas",
+        "next": "explore_ruins_buildings"
+      },
+      {
+        "choice": "Voltar para os arredores da vila",
+        "next": "explore_outskirts"
+      }
+    ]
+  },
+  "explore_ruins_temple": {
+    "description": "O templo nas ruínas ainda está de pé, embora o teto tenha desabado em vários pontos. No centro, há um altar que parece irradiar uma energia estranha.",
+    "options": [
+      {
+        "choice": "Examinar o altar do templo",
+        "next": "examine_ruins_altar"
+      },
+      {
+        "choice": "Explorar mais o templo",
+        "next": "explore_more_ruins_temple"
+      },
+      {
+        "choice": "Sair do templo e explorar as ruínas",
+        "next": "explore_ancient_ruins"
+      }
+    ]
+  },
+  "explore_ruins_buildings": {
+    "description": "As construções destruídas ao redor do templo são um mistério. Restos de paredes e colunas sugerem que este era um lugar importante, mas agora está quase completamente em ruínas.",
+    "options": [
+      {
+        "choice": "Buscar vestígios de habitantes antigos",
+        "next": "search_ancient_inhabitants"
+      },
+      {
+        "choice": "Explorar mais as construções",
+        "next": "explore_more_ruins_buildings"
+      },
+      {
+        "choice": "Sair das ruínas",
+        "next": "explore_ancient_ruins"
+      }
+    ]
+  }
+}

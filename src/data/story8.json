@@ -1,0 +1,77 @@
+{
+  "explore_black_forest": {
+    "description": "A Floresta Negra é densa e cheia de mistérios. As árvores bloqueiam a maior parte da luz, criando um ambiente sombrio e misterioso. Você pode sentir a magia antiga no ar, e há histórias de que criaturas perigosas habitam essa floresta.",
+    "options": [
+      {
+        "choice": "Explorar as profundezas da floresta",
+        "next": "explore_deep_forest"
+      },
+      {
+        "choice": "Buscar a entrada para a Floresta das Sombras",
+        "next": "explore_shadow_forest_entrance"
+      },
+      {
+        "choice": "Voltar para o Vale Misterioso",
+        "next": "explore_valley"
+      },
+      {
+        "choice": "Voltar para os arredores da vila",
+        "next": "explore_outskirts"
+      }
+    ]
+  },
+  "explore_mystic_desert": {
+    "description": "O Deserto Místico se estende diante de você, com dunas de areia dourada que parecem sussurrar enquanto o vento as molda. No horizonte, você pode ver um oásis brilhando sob o sol escaldante.",
+    "options": [
+      {
+        "choice": "Explorar o Oásis Encantado",
+        "next": "explore_enchanted_oasis"
+      },
+      {
+        "choice": "Buscar o Templo Subterrâneo",
+        "next": "explore_subterranean_temple"
+      },
+      {
+        "choice": "Buscar a entrada para a Floresta das Sombras",
+        "next": "explore_shadow_forest_entrance"
+      },
+      {
+        "choice": "Voltar para as Montanhas da Perdição",
+        "next": "explore_doom_mountains"
+      },
+      {
+        "choice": "Voltar para o Vale Misterioso",
+        "next": "explore_valley"
+      }
+    ]
+  },
+  "explore_subterranean_temple": {
+    "description": "O Templo Subterrâneo está escondido nas profundezas do deserto, acessível por uma abertura oculta nas dunas. Dentro, o ar é frio e o ambiente é iluminado por tochas antigas. Há uma presença mística no ar, como se os deuses antigos ainda estivessem por perto.",
+    "options": [
+      {
+        "choice": "Explorar a sala do trono",
+        "next": "explore_throne_room"
+      },
+      {
+        "choice": "Investigar a sala dos tesouros",
+        "next": "explore_treasure_room"
+      },
+      {
+        "choice": "Explorar as Catacumbas Antigas",
+        "next": "explore_ancient_catacombs"
+      },
+      {
+        "choice": "Buscar o caminho para a Cidade Submersa",
+        "next": "explore_submerged_city"
+      },
+      {
+        "choice": "Buscar a entrada para a Floresta das Sombras",
+        "next": "explore_shadow_forest_entrance"
+      },
+      {
+        "choice": "Deixar o templo e explorar o deserto",
+        "next": "explore_mystic_desert"
+      }
+    ]
+  }
+}

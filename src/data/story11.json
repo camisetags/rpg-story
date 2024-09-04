@@ -1,0 +1,453 @@
+{
+  "explore_frozen_mountains": {
+    "description": "As Montanhas Gélidas se erguem imponentes, com picos cobertos de neve e gelo. O vento frio corta a pele, e as trilhas são traiçoeiras. Dizem que nas profundezas dessas montanhas, segredos antigos e criaturas lendárias aguardam aqueles que são corajosos o suficiente para explorá-las.",
+    "options": [
+      {
+        "choice": "Subir até o pico mais alto",
+        "next": "climb_highest_peak"
+      },
+      {
+        "choice": "Explorar as cavernas geladas",
+        "next": "explore_icy_caves"
+      },
+      {
+        "choice": "Visitar a tribo nômade das montanhas",
+        "next": "visit_nomad_tribe"
+      },
+      {
+        "choice": "Buscar a entrada para a Caverna Oculta",
+        "next": "find_hidden_cave_entrance"
+      },
+      {
+        "choice": "Voltar para a Floresta das Sombras",
+        "next": "explore_shadow_forest_entrance"
+      }
+    ]
+  },
+  "climb_highest_peak": {
+    "description": "A subida ao pico mais alto das Montanhas Gélidas é árdua e perigosa. Cada passo é uma luta contra o frio e o vento, e a falta de oxigênio começa a pesar em seu corpo. No entanto, ao chegar ao topo, você encontra um antigo altar esculpido na rocha e um dragão adormecido enrolado ao redor dele.",
+    "options": [
+      {
+        "choice": "Tentar acordar o dragão",
+        "next": "wake_the_dragon"
+      },
+      {
+        "choice": "Investigar o altar sem acordar o dragão",
+        "next": "investigate_peak_altar"
+      },
+      {
+        "choice": "Descer a montanha para explorar mais",
+        "next": "explore_frozen_mountains"
+      }
+    ]
+  },
+  "wake_the_dragon": {
+    "description": "Ao tentar acordar o dragão, você percebe que este é um ser antigo e poderoso, e seu despertar pode trazer tanto sabedoria quanto destruição. O dragão abre seus olhos brilhantes e o encara com uma sabedoria milenar.",
+    "options": [
+      {
+        "choice": "Conversar com o dragão",
+        "next": "talk_to_dragon"
+      },
+      {
+        "choice": "Fugir antes que o dragão ataque",
+        "next": "run_from_dragon"
+      }
+    ]
+  },
+  "talk_to_dragon": {
+    "description": "O dragão, em vez de atacar, começa a falar em uma língua antiga, mas você consegue entender. Ele revela segredos das montanhas e oferece a você uma escolha: um tesouro escondido nas montanhas ou uma bênção que o protegerá nas suas próximas jornadas.",
+    "options": [
+      {
+        "choice": "Aceitar o tesouro escondido",
+        "next": "accept_hidden_treasure"
+      },
+      {
+        "choice": "Aceitar a bênção do dragão",
+        "next": "accept_dragon_blessing"
+      }
+    ]
+  },
+  "accept_hidden_treasure": {
+    "description": "O dragão lhe dá um mapa que leva a um tesouro escondido nas Montanhas Gélidas. Você sente que este é um dos maiores segredos das montanhas, guardado por séculos.",
+    "effects": {
+      "gain_item": {
+        "name": "Mapa do Tesouro Escondido",
+        "weight": 0.5,
+        "cost": 1000
+      }
+    },
+    "options": [
+      {
+        "choice": "Buscar o tesouro nas montanhas",
+        "next": "search_hidden_treasure"
+      },
+      {
+        "choice": "Descer a montanha para explorar mais",
+        "next": "explore_frozen_mountains"
+      }
+    ]
+  },
+  "accept_dragon_blessing": {
+    "description": "O dragão sopra uma fumaça dourada em sua direção, e você sente uma energia poderosa envolvendo seu corpo. A bênção do dragão agora o protege, aumentando suas habilidades e resistência contra o frio e o perigo.",
+    "effects": {
+      "gain_skill": {
+        "name": "Bênção do Dragão",
+        "level": 2
+      }
+    },
+    "options": [
+      {
+        "choice": "Descer a montanha para explorar mais",
+        "next": "explore_frozen_mountains"
+      }
+    ]
+  },
+  "investigate_peak_altar": {
+    "description": "O altar no pico mais alto das Montanhas Gélidas está coberto de runas antigas que descrevem um ritual para obter o poder do dragão. No entanto, ao investigar mais de perto, você percebe que realizar esse ritual pode ter um custo alto.",
+    "options": [
+      {
+        "choice": "Realizar o ritual",
+        "next": "perform_dragon_ritual"
+      },
+      {
+        "choice": "Descer a montanha sem realizar o ritual",
+        "next": "explore_frozen_mountains"
+      }
+    ]
+  },
+  "perform_dragon_ritual": {
+    "description": "Ao realizar o ritual, as runas brilham intensamente e você sente uma energia poderosa se acumulando ao seu redor. O dragão desperta, não mais adormecido, e sua fúria é liberada. Você deve lutar para sobreviver a esta batalha épica.",
+    "effects": {
+      "trigger_event": {
+        "name": "Batalha Contra o Dragão",
+        "difficulty": "Muito Alto"
+      }
+    },
+    "options": [
+      {
+        "choice": "Lutar contra o dragão",
+        "next": "fight_the_dragon"
+      },
+      {
+        "choice": "Fugir do pico antes que o dragão o destrua",
+        "next": "escape_the_peak"
+      }
+    ]
+  },
+  "fight_the_dragon": {
+    "description": "A luta contra o dragão é uma das maiores provações que você já enfrentou. O dragão ataca com chamas e garras afiadas, e você deve usar todas as suas habilidades e coragem para sobreviver.",
+    "effects": {
+      "health_loss": {
+        "amount": 30
+      },
+      "gain_item": {
+        "name": "Escama do Dragão",
+        "weight": 2,
+        "cost": 1500
+      }
+    },
+    "options": [
+      {
+        "choice": "Sobreviver à luta e continuar explorando as montanhas",
+        "next": "explore_frozen_mountains"
+      },
+      {
+        "choice": "Recuperar-se e descer a montanha",
+        "next": "explore_frozen_mountains"
+      }
+    ]
+  },
+  "escape_the_peak": {
+    "description": "Você decide fugir antes que o dragão destrua tudo ao redor. A descida é perigosa, mas você consegue escapar com vida. No entanto, o dragão agora está solto nas montanhas, e seu destino pode estar selado.",
+    "options": [
+      {
+        "choice": "Explorar outras partes das montanhas",
+        "next": "explore_frozen_mountains"
+      },
+      {
+        "choice": "Voltar para a segurança da Floresta das Sombras",
+        "next": "explore_shadow_forest_entrance"
+      }
+    ]
+  },
+  "explore_icy_caves": {
+    "description": "As cavernas geladas nas profundezas das Montanhas Gélidas são um verdadeiro labirinto de gelo e escuridão. As paredes brilham com cristais de gelo, e o ar é tão frio que cada respiração parece congelar em seus pulmões.",
+    "options": [
+      {
+        "choice": "Explorar as cavernas mais a fundo",
+        "next": "explore_deeper_icy_caves"
+      },
+      {
+        "choice": "Buscar a saída das cavernas",
+        "next": "exit_icy_caves"
+      },
+      {
+        "choice": "Buscar uma passagem secreta",
+        "next": "find_secret_passage"
+      }
+    ]
+  },
+  "explore_deeper_icy_caves": {
+    "description": "À medida que você avança pelas cavernas geladas, o frio se torna quase insuportável. No entanto, você encontra um lago congelado onde algo parece brilhar sob a superfície do gelo.",
+    "options": [
+      {
+        "choice": "Quebrar o gelo e investigar",
+        "next": "break_ice_lake"
+      },
+      {
+        "choice": "Voltar para a entrada das cavernas",
+        "next": "explore_icy_caves"
+      }
+    ]
+  },
+  "break_ice_lake": {
+    "description": "Ao quebrar o gelo, você encontra um artefato antigo preso na profundidade do lago congelado. No entanto, ao tocá-lo, a caverna começa a tremer, e o gelo ao seu redor começa a rachar perigosamente.",
+    "effects": {
+      "gain_item": {
+        "name": "Artefato do Lago Congelado",
+        "weight": 1,
+        "cost": 2000
+      },
+      "trigger_event": {
+        "name": "Avalanche de Gelo",
+        "difficulty": "Alto"
+      }
+    },
+    "options": [
+      {
+        "choice": "Fugir da caverna antes que ela desabe",
+        "next": "escape_icy_cave"
+      },
+      {
+        "choice": "Tentar encontrar uma rota de fuga",
+        "next": "find_escape_route"
+      }
+    ]
+  },
+  "escape_icy_cave": {
+    "description": "Você corre pela caverna enquanto o gelo começa a desabar ao seu redor. Cada segundo conta, e você deve se mover rapidamente para escapar antes de ser enterrado pelo gelo.",
+    "effects": {
+      "health_loss": {
+        "amount": 10
+      }
+    },
+    "options": [
+      {
+        "choice": "Sobreviver e sair das cavernas",
+        "next": "explore_frozen_mountains"
+      }
+    ]
+  },
+  "find_escape_route": {
+    "description": "Você encontra uma passagem estreita que parece levar para fora da caverna. O caminho é perigoso, mas oferece uma chance de escapar do desabamento.",
+    "options": [
+      {
+        "choice": "Seguir a rota de fuga",
+        "next": "escape_icy_cave"
+      }
+    ]
+  },
+  "visit_nomad_tribe": {
+    "description": "Você encontra uma tribo nômade nas Montanhas Gélidas. Eles são sobreviventes endurecidos, com vasto conhecimento sobre as montanhas e seus perigos. O líder da tribo, um ancião sábio, o convida para se juntar ao acampamento e compartilhar histórias ao redor da fogueira.",
+    "options": [
+      {
+        "choice": "Conversar com o líder da tribo",
+        "next": "talk_tribe_leader"
+      },
+      {
+        "choice": "Pedir orientação sobre as Montanhas Gélidas",
+        "next": "ask_survival_tips"
+      },
+      {
+        "choice": "Agradecer e continuar explorando as montanhas",
+        "next": "explore_frozen_mountains"
+      }
+    ]
+  },
+
+  "talk_tribe_leader": {
+    "description": "O líder da tribo, um ancião de aparência sábia, o saúda com respeito. Ele compartilha histórias antigas sobre os perigos e os segredos das Montanhas Gélidas, incluindo lendas sobre um artefato perdido que pode controlar o poder do dragão.",
+    "options": [
+      {
+        "choice": "Pedir mais informações sobre o artefato perdido",
+        "next": "ask_about_lost_artifact"
+      },
+      {
+        "choice": "Pedir orientação sobre como sobreviver nas montanhas",
+        "next": "ask_survival_tips"
+      },
+      {
+        "choice": "Agradecer e continuar explorando as montanhas",
+        "next": "explore_frozen_mountains"
+      }
+    ]
+  },
+  "ask_about_lost_artifact": {
+    "description": "O ancião descreve o artefato como um amuleto antigo, escondido em algum lugar nas profundezas das montanhas. Ele diz que a única pista para encontrar o amuleto está gravada nas paredes de uma caverna esquecida, conhecida apenas pelos membros da tribo.",
+    "options": [
+      {
+        "choice": "Pedir para ser levado à caverna esquecida",
+        "next": "visit_forgotten_cave"
+      },
+      {
+        "choice": "Agradecer e continuar explorando as montanhas",
+        "next": "explore_frozen_mountains"
+      }
+    ]
+  },
+  "ask_survival_tips": {
+    "description": "O ancião lhe dá conselhos valiosos sobre como sobreviver nas Montanhas Gélidas: sempre seguir os ventos do sul para evitar as avalanches, e nunca acampar sob penhascos com gelo rachado. Ele também lhe oferece uma pequena bolsa de ervas medicinais que podem curar ferimentos causados pelo frio extremo.",
+    "effects": {
+      "gain_item": {
+        "name": "Ervas Medicinais",
+        "weight": 0.2,
+        "cost": 50
+      }
+    },
+    "options": [
+      {
+        "choice": "Agradecer e continuar explorando as montanhas",
+        "next": "explore_frozen_mountains"
+      }
+    ]
+  },
+  "visit_forgotten_cave": {
+    "description": "O ancião envia um guia da tribo para levá-lo à caverna esquecida. Ao chegar, você encontra inscrições antigas nas paredes, descrevendo o caminho para o artefato perdido. No entanto, a caverna é habitada por uma criatura antiga que vigia o local há séculos.",
+    "options": [
+      {
+        "choice": "Enfrentar a criatura e explorar a caverna",
+        "next": "fight_forgotten_cave_creature"
+      },
+      {
+        "choice": "Tentar negociar com a criatura para obter o artefato",
+        "next": "negotiate_with_creature"
+      }
+    ]
+  },
+  "fight_forgotten_cave_creature": {
+    "description": "A batalha contra a criatura antiga é intensa. Ela é rápida e implacável, usando a escuridão da caverna a seu favor. No entanto, com habilidade e determinação, você consegue derrotá-la, permitindo que explore a caverna livremente.",
+    "effects": {
+      "health_loss": {
+        "amount": 25
+      },
+      "gain_item": {
+        "name": "Amuleto Perdido",
+        "weight": 0.5,
+        "cost": 2000
+      }
+    },
+    "options": [
+      {
+        "choice": "Pegar o amuleto perdido e sair da caverna",
+        "next": "leave_forgotten_cave"
+      },
+      {
+        "choice": "Explorar mais a caverna",
+        "next": "explore_forgotten_cave"
+      }
+    ]
+  },
+  "negotiate_with_creature": {
+    "description": "Você decide negociar com a criatura, oferecendo-lhe algo de valor em troca do acesso ao amuleto perdido. A criatura aceita sua oferta, entregando-lhe o artefato sem violência. No entanto, você sente que a criatura está guardando outros segredos na caverna.",
+    "effects": {
+      "gain_item": {
+        "name": "Amuleto Perdido",
+        "weight": 0.5,
+        "cost": 2000
+      },
+      "lose_item": {
+        "name": "Ervas Medicinais",
+        "weight": 0.2
+      }
+    },
+    "options": [
+      {
+        "choice": "Pegar o amuleto perdido e sair da caverna",
+        "next": "leave_forgotten_cave"
+      },
+      {
+        "choice": "Explorar mais a caverna",
+        "next": "explore_forgotten_cave"
+      }
+    ]
+  },
+  "leave_forgotten_cave": {
+    "description": "Com o amuleto perdido em mãos, você decide deixar a caverna esquecida. O vento frio das montanhas o recebe enquanto você sai, e o peso do artefato em sua bolsa parece indicar que ele tem um grande poder.",
+    "options": [
+      {
+        "choice": "Retornar à tribo nômade",
+        "next": "visit_nomad_tribe"
+      },
+      {
+        "choice": "Continuar explorando as Montanhas Gélidas",
+        "next": "explore_frozen_mountains"
+      }
+    ]
+  },
+  "explore_forgotten_cave": {
+    "description": "Você decide explorar mais a caverna esquecida. Nas profundezas, encontra um lago subterrâneo brilhando com uma luz azulada, e a água parece emanar uma energia misteriosa.",
+    "options": [
+      {
+        "choice": "Beber da água do lago",
+        "next": "drink_lake_water"
+      },
+      {
+        "choice": "Investigar a fonte da luz",
+        "next": "investigate_lake_light"
+      }
+    ]
+  },
+  "drink_lake_water": {
+    "description": "Ao beber da água do lago subterrâneo, você sente uma onda de energia percorrer seu corpo. Suas feridas começam a se curar, e um conhecimento antigo preenche sua mente, como se você tivesse tocado na própria essência da montanha.",
+    "effects": {
+      "health_restore": {
+        "amount": 20
+      },
+      "gain_skill": {
+        "name": "Sabedoria das Montanhas",
+        "level": 1
+      }
+    },
+    "options": [
+      {
+        "choice": "Explorar mais a caverna",
+        "next": "explore_forgotten_cave"
+      },
+      {
+        "choice": "Deixar a caverna e continuar explorando as montanhas",
+        "next": "explore_frozen_mountains"
+      }
+    ]
+  },
+  "investigate_lake_light": {
+    "description": "Você se aproxima da fonte da luz e descobre que ela vem de uma pedra flutuante no centro do lago. A pedra parece pulsar com uma energia antiga, e tocá-la pode revelar segredos ou despertar algo perigoso.",
+    "options": [
+      {
+        "choice": "Tocar a pedra flutuante",
+        "next": "touch_floating_stone"
+      },
+      {
+        "choice": "Sair da caverna sem tocar na pedra",
+        "next": "leave_forgotten_cave"
+      }
+    ]
+  },
+  "touch_floating_stone": {
+    "description": "Ao tocar a pedra flutuante, você sente uma conexão profunda com a montanha. A pedra revela visões de tempos antigos, mostrando a história das Montanhas Gélidas e o poder que elas guardam. No entanto, essa conexão vem com um custo, e você sente parte de sua energia vital sendo drenada.",
+    "effects": {
+      "health_loss": {
+        "amount": 15
+      },
+      "gain_skill": {
+        "name": "Visões Antigas",
+        "level": 1
+      }
+    },
+    "options": [
+      {
+        "choice": "Deixar a caverna e continuar explorando as montanhas",
+        "next": "explore_frozen_mountains"
+      }
+    ]
+  }
+}

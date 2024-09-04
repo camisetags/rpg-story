@@ -1,0 +1,192 @@
+{
+  "explore_ancient_catacombs": {
+    "description": "As Catacumbas Antigas estão escondidas nas profundezas abaixo do Templo Subterrâneo. Elas são escuras e frias, com túneis sinuosos que parecem se estender infinitamente. As paredes estão cobertas de inscrições antigas, e você pode sentir a presença dos espíritos dos reis enterrados aqui.",
+    "options": [
+      {
+        "choice": "Explorar as criptas dos reis",
+        "next": "explore_royal_crypts"
+      },
+      {
+        "choice": "Investigar os túneis antigos",
+        "next": "explore_ancient_tunnels"
+      },
+      {
+        "choice": "Buscar a saída para a Caverna Oculta",
+        "next": "exit_to_hidden_cave"
+      },
+      {
+        "choice": "Voltar para o Templo Subterrâneo",
+        "next": "explore_subterranean_temple"
+      }
+    ]
+  },
+  "explore_royal_crypts": {
+    "description": "As criptas dos reis são imponentes, com sarcófagos elaboradamente esculpidos e adornados com joias. Há uma sensação de poder e respeito aqui, mas também de perigo, como se os espíritos dos antigos reis estivessem protegendo seus túmulos.",
+    "options": [
+      {
+        "choice": "Abrir um dos sarcófagos",
+        "next": "open_sarcophagus"
+      },
+      {
+        "choice": "Explorar mais as catacumbas",
+        "next": "explore_ancient_catacombs"
+      },
+      {
+        "choice": "Voltar para o Templo Subterrâneo",
+        "next": "explore_subterranean_temple"
+      }
+    ]
+  },
+  "open_sarcophagus": {
+    "description": "Ao abrir o sarcófago, você encontra os restos mortais de um antigo rei, junto com uma arma ancestral que emana poder. No entanto, ao tocar a arma, o espírito do rei desperta e exige que você prove ser digno de portar seu legado.",
+    "options": [
+      {
+        "choice": "Aceitar o desafio do espírito",
+        "next": "accept_spirit_challenge"
+      },
+      {
+        "choice": "Deixar o sarcófago fechado e recuar",
+        "next": "explore_royal_crypts"
+      }
+    ]
+  },
+  "accept_spirit_challenge": {
+    "description": "O espírito do rei desafia você para uma batalha espiritual. Este é um teste de sua força e determinação, e a vitória significa receber a bênção do rei e a posse da arma ancestral.",
+    "effects": {
+      "gain_item": {
+        "name": "Espada Ancestral",
+        "weight": 2,
+        "cost": 600
+      }
+    },
+    "options": [
+      {
+        "choice": "Explorar mais as catacumbas",
+        "next": "explore_ancient_catacombs"
+      },
+      {
+        "choice": "Voltar para o Templo Subterrâneo",
+        "next": "explore_subterranean_temple"
+      }
+    ]
+  },
+  "explore_ancient_tunnels": {
+    "description": "Os túneis antigos são um labirinto de caminhos sinuosos. As paredes estão gravadas com runas que parecem contar a história de um grande império que caiu há milênios. Quanto mais você explora, mais sente que está se afastando do mundo exterior.",
+    "options": [
+      {
+        "choice": "Buscar a saída para a Caverna Oculta",
+        "next": "exit_to_hidden_cave"
+      },
+      {
+        "choice": "Voltar para as Catacumbas Antigas",
+        "next": "explore_ancient_catacombs"
+      }
+    ]
+  },
+  "exit_to_hidden_cave": {
+    "description": "Após muito explorar os túneis, você encontra uma saída que leva diretamente para a Caverna Oculta. A transição é quase imperceptível, mas o ar pesado e a sensação de perigo confirmam que você entrou em outro território.",
+    "options": [
+      {
+        "choice": "Explorar a Caverna Oculta",
+        "next": "explore_hidden_cave"
+      },
+      {
+        "choice": "Voltar para as Catacumbas Antigas",
+        "next": "explore_ancient_catacombs"
+      }
+    ]
+  },
+  "discover_submerged_city_entrance": {
+    "description": "Enquanto explora o Oásis Encantado, você descobre uma entrada submersa nas águas cristalinas que leva a uma cidade perdida abaixo do lago. Este lugar, conhecido como a Cidade Submersa, guarda segredos há muito esquecidos.",
+    "options": [
+      {
+        "choice": "Entrar na Cidade Submersa",
+        "next": "explore_submerged_city"
+      },
+      {
+        "choice": "Voltar para o Oásis Encantado",
+        "next": "explore_enchanted_oasis"
+      }
+    ]
+  },
+  "explore_submerged_city": {
+    "description": "A Cidade Submersa é uma visão de outro mundo, com ruas e edifícios preservados pela água. As correntes subaquáticas criam um movimento constante, como se a cidade ainda estivesse viva. No centro, há um grande templo submerso que parece ser o ponto focal deste lugar.",
+    "options": [
+      {
+        "choice": "Explorar o templo submerso",
+        "next": "explore_submerged_temple"
+      },
+      {
+        "choice": "Explorar as ruínas da cidade",
+        "next": "explore_submerged_ruins"
+      },
+      {
+        "choice": "Buscar uma saída para o Templo Subterrâneo",
+        "next": "exit_to_subterranean_temple"
+      },
+      {
+        "choice": "Voltar para o Oásis Encantado",
+        "next": "explore_enchanted_oasis"
+      }
+    ]
+  },
+  "explore_submerged_temple": {
+    "description": "O templo submerso é majestoso, com pilares imensos que sustentam um teto decorado com mosaicos de ouro. No altar principal, há uma relíquia submersa que brilha com uma luz suave, e ao se aproximar, você sente uma poderosa aura mágica.",
+    "options": [
+      {
+        "choice": "Tentar recuperar a relíquia submersa",
+        "next": "retrieve_submerged_relic"
+      },
+      {
+        "choice": "Explorar mais o templo",
+        "next": "explore_submerged_temple"
+      }
+    ]
+  },
+  "retrieve_submerged_relic": {
+    "description": "Ao recuperar a relíquia submersa, você sente um poder antigo fluir através de você. A relíquia é uma chave para desvendar os mistérios da Cidade Submersa, mas também atraiu a atenção de entidades antigas que guardam o templo.",
+    "effects": {
+      "add_item": {
+        "name": "Relíquia Submersa",
+        "weight": 1,
+        "cost": 800
+      }
+    },
+    "options": [
+      {
+        "choice": "Enfrentar as entidades antigas",
+        "next": "face_ancient_entities"
+      },
+      {
+        "choice": "Sair do templo e explorar mais a cidade",
+        "next": "explore_submerged_city"
+      }
+    ]
+  },
+  "explore_submerged_ruins": {
+    "description": "As ruínas da Cidade Submersa são vastas e misteriosas. Há inscrições nas paredes que parecem ser de uma língua há muito esquecida. Você sente que este lugar guarda segredos que poderiam mudar o destino do mundo.",
+    "options": [
+      {
+        "choice": "Explorar mais as ruínas",
+        "next": "explore_submerged_city"
+      },
+      {
+        "choice": "Buscar uma saída para o Templo Subterrâneo",
+        "next": "exit_to_subterranean_temple"
+      }
+    ]
+  },
+  "exit_to_subterranean_temple": {
+    "description": "Após explorar a Cidade Submersa, você encontra um túnel que leva de volta ao Templo Subterrâneo. A transição entre os dois lugares é quase imperceptível, mas a mudança na pressão da água indica que você está se movendo para outro território.",
+    "options": [
+      {
+        "choice": "Explorar o Templo Subterrâneo",
+        "next": "explore_subterranean_temple"
+      },
+      {
+        "choice": "Voltar para a Cidade Submersa",
+        "next": "explore_submerged_city"
+      }
+    ]
+  }
+}
